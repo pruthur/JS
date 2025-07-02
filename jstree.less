@@ -1,0 +1,220 @@
+﻿/*JSTree specific style changes*/
+@heightAndLineHeight: 34px;
+
+.js-tree {
+    margin-top: 10px;
+    height: 100%;
+    overflow: auto;
+    font-size: 0.8em;
+
+    & > ul > li {
+        margin-left: 0;
+
+        &.jstree-open, &.jstree-closed {
+            /*TODO: HH - need to replace with actual icon class instead*/
+            background-repeat: no-repeat;
+
+            a[data-mw-tree-change-cursor="true"] {
+                cursor: default;
+            }
+            a.bold-text:after {
+                content: " ";
+                display: block;
+                height: 12px;
+                width: 18px;
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                position: absolute;
+                top: 9px;
+                left: 9px;
+            }
+        }
+
+        &.jstree-open {
+            /*TODO: HH - need to replace with actual icon class instead*/
+            background-image: url("/Images/mwredesign/left-tree-folder-open.svg");
+            background-position: 9px 10px;
+            background-size: 18px;
+
+            a.bold-text:after {
+                background-image: url(/Images/mwredesign/left-tree-folder-open.svg);
+            }
+
+            li {
+                /*TODO: HH - need to replace with actual icon class instead*/
+                background-repeat: no-repeat;
+
+                a.bold-text:after {
+                    content: none;
+                }
+            }
+        }
+
+        &.jstree-closed {
+            /*TODO: HH - need to replace with actual icon class instead*/
+            background-image: url("/Images/mwredesign/left-tree-folder-closed.svg");
+            background-position: 11px 11px;
+            background-size: 15px;
+
+            a.bold-text:after {
+                background-image: url(/Images/mwredesign/left-tree-folder-closed.svg);
+            }
+
+            .jstree-leaf {
+                a.bold-text:after {
+                    background-image: none;
+                }
+            }
+        }
+    }
+
+    li {
+        min-height: @heightAndLineHeight;
+        position: relative;
+        margin-left: 15px;
+        cursor: pointer;
+
+        &:hover {
+            & > a > nobr {
+                /*font-weight: 600;*/
+            }
+        }
+
+        &.jstree-leaf {
+            background-image: none;
+
+            &:before {
+                content: ' ';
+                display: block;
+                position: absolute;
+                height: 6px;
+                width: 6px;
+                top: 14px;
+                left: 16px;
+                z-index: 1;
+
+                ins {
+                    display: none;
+
+                    img {
+                        display: none !important;
+                    }
+                }
+            }
+        }
+
+        li {
+            &.jstree-open, &.jstree-closed {
+                /*TODO: HH - need to replace with actual icon class instead*/
+                background: none !important;
+
+                &:before, &:after {
+                    content: ' ';
+                    display: block;
+                    position: absolute;
+                    z-index: 1;
+                }
+                /*vertical line as part of plus sign*/
+                &:before {
+                    height: 10px;
+                    width: 2px;
+                    top: 12px;
+                    left: 18px;
+                }
+                /*horizontal line as part of plus sign*/
+                &:after {
+                    width: 10px;
+                    height: 2px;
+                    top: 16px;
+                    left: 14px;
+                }
+
+                & > ins {
+                    & > img {
+                        display: block;
+                        height: 16px;
+                        width: 16px;
+                        position: absolute;
+                        top: 0;
+                        left: 1px;
+                        z-index: 2;
+
+                        ~ img {
+                            display: none;
+                        }
+                    }
+
+                    & + a {
+                    }
+                }
+            }
+
+            &.jstree-open {
+                &:before { /*hide vertical line when its a collapse icon*/
+                    content: none!important;
+                }
+            }
+
+            &.jstree-closed {
+            }
+        }
+
+        &.jstree-open, &.jstree-closed {
+            & > ins {
+                display: inline;
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                height: 14px;
+                width: 17px;
+                opacity: 0;
+                z-index: 2;
+
+                & > img {
+                    display: inline;
+                    height: 14px;
+                    width: 17px;
+                    position: absolute;
+                    top: 0px;
+                    left: 0px
+                    /*  & ~ img {
+                        display: none;
+                    }*/
+                }
+                /*& + a {
+                    pointer-events: auto;
+
+                    &.bold-text {
+                        &:before {
+                            content: none !important;
+                        }
+                    }
+                }*/
+            }
+        }
+
+        a {
+            display: block;
+            box-sizing: border-box;
+            height: @heightAndLineHeight;
+
+            nobr {
+                display: block;
+                width: 100%;
+                line-height: 10px;
+                padding: 10px 10px 0 30px;
+                height: @heightAndLineHeight;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                box-sizing: border-box;
+                font-weight: 500;
+            }
+        }
+
+        .jstree-icon {
+            display: none;
+        }
+    }
+}

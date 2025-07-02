@@ -1,0 +1,270 @@
+﻿.igtable-container-header {
+    border-collapse: separate;
+    height: 30px !important;
+    padding: 0 3px !important;
+
+    input#CheckAll {
+        height: 13px;
+        width: 13px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    tr {
+        th {
+            nobr {
+                padding-right: 4px;
+            }
+        }
+    }
+
+    &.mw-quantity-header-class,
+    &.mw-baseunitcost-header-class,
+    &.mw-amount-header-class {
+        text-align: right;
+    }
+}
+
+td.igtable-container-body, tr.igtable-container-selected td {
+    height: 34px !important;
+    vertical-align: middle !important;
+    border-collapse: separate !important;
+    text-indent: 0 !important;
+
+    nobr {
+        min-height: 16px;
+        line-height: 16px;
+        min-width: 16px;
+        display: block;
+        white-space: normal !important;
+        word-break: break-word !important;
+        padding: 2px 4px !important;
+
+        & + input[type="text"] {
+            height: 24px !important;
+            width: calc(100% - 15px) !important;
+            margin: 2% 0;
+            margin-left: 5px;
+            margin-right: 10px;
+            min-width: auto !important;
+        }
+
+        input[type="checkbox"] {
+            /*margin: 0 auto;*/
+            display: block;
+        }
+    }
+}
+
+tfoot.igtable-container-body {
+    tr {
+        th {
+            nobr {
+                padding-right: 7px !important;
+            }
+        }
+    }
+}
+
+.igtable-container-body {
+
+    .igtable-container-altrow {
+        td {
+            nobr {
+                display: block;
+                padding: 2px 4px;
+            }
+        }
+
+        & + tr[id*='C1xuwgGroupDetails'], + tr[id*='C1xuwgAltDetails'] {
+            td {
+                nobr {
+                    display: block;
+                    padding: 2px 4px;
+                }
+            }
+        }
+    }
+
+    tr {
+        td {
+            height: 34px !important;
+            vertical-align: middle !important;
+            font-weight: 600;
+            font-size: 0.95em;
+            text-align: left !important;
+            word-break: break-word;
+            white-space: normal;
+            line-height: 18px;
+            text-indent: 0 !important;
+
+            nobr {
+                white-space: normal;
+                line-height: 18px;
+                text-indent: 0 !important;
+                padding-left: 6px !important;
+            }
+
+            &.mw-quantity-class,
+            &.mw-baseunitcost-class,
+            &.mw-amount-class {
+                text-align: right !important;
+
+                nobr {
+                    padding-right: 6px !important;
+                }
+            }
+        }
+    }
+}
+
+table[class^="ig_"] {
+    margin-top: 10px;
+
+    &[id*="ucComponentsxgridComponents"] { // we can use this as a mixin for specific igtables to remove table border also refer colors
+        tbody {
+            tr, tr.igtable-container-selected {
+                td {
+                    text-indent: 0px !important;
+                    padding: 2px 4px;
+                    border-top: 0;
+                    border-left: 0;
+
+                    nobr {
+                        text-indent: 0px !important;
+                        white-space: normal;
+                        word-break: break-all;
+                        line-height: inherit;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*Bid tabulation table*/
+
+table[id*="BidSummary"] {
+    thead.grdHeader {
+
+        th {
+        }
+
+        th.grdHeader {
+            height: 32px;
+            line-height: 32px;
+            border-top: none !important;
+        }
+    }
+
+    tbody.grdRow {
+        tr[id*="BidSummary"] {
+            td {
+                height: 30px !important;
+                line-height: 30px !important;
+                vertical-align: middle;
+                padding: 2px;
+            }
+
+            &:nth-child(even) > td {
+            }
+
+            &:hover > td {
+            }
+
+            th.grdHeader {
+            }
+        }
+    }
+}
+/*Bid tabulation table*/
+
+.ui-dialog {
+    th.igtable-container-header {
+        padding: 3px 5px !important;
+    }
+}
+
+.ClientDynamicGrid {
+    tr[role="row"]{
+        height: 34px;
+    }
+
+    .k-auto-scrollable {
+        .k-grid-edit-row {
+            td {
+
+                input[type="text"] {
+                    padding: 0 2px !important;
+                    height: 26px;
+                    line-height: 26px;
+                    border: 1px solid #dcdee0;
+                    border-radius: 0;
+                }
+
+                textarea {
+                    vertical-align: middle;
+                    margin: 2px 0;
+                }
+            }
+        }
+    }
+}
+
+.igtable-container-header.igtable-container-body th {
+    text-indent: 3px !important;
+}
+
+#divModulesGrid {
+    table {
+        th.igtable-container-header {
+            padding: 0 !important;
+            &:not(:first-child) {
+                text-align: center;
+            }
+        }
+    }
+}
+
+#coreMainControlDiv table {
+    .mw-design.create-project {
+        td#modulesGridInCreateProject.createProjectModules[page-render-mode="edit"] table{
+            width: 500px !important;
+            table-layout: auto !important;
+            thead tr th.igtable-container-header {
+                text-align: center !important;
+                width: 100px !important;
+                padding: 0 !important;
+                box-sizing: border-box;
+
+                &:nth-child(2) {
+                    text-align: left !important;
+                    width: 200px !important;
+                }
+            }
+        }
+
+        td#attributesGridInCreateProject.createProjectAttributes table {
+            tbody.igtable-container-header {
+                tr {
+                    td {
+                        nobr {
+                            padding: 0px 4px !important;
+                        }
+                    }
+
+                    &.igtable-container-selected {
+                        td {
+                            border-bottom: none !important;
+
+                            nobr {
+                                padding: 0px 3px 2px !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

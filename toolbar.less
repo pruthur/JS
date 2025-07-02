@@ -1,0 +1,185 @@
+﻿div.RadRibbonBar {
+    font-size: 11px !important;
+
+    .rrbWrap {
+        border: none;
+        position: relative;
+    }
+
+    .rrbButton  {
+        transition: none !important;
+        padding: 4px !important;
+        cursor: pointer;
+        min-width: 28px;
+
+        .t-ripple {
+            display: none !important;
+        }
+
+        &.rrbDisabled {
+            pointer-events: none;
+        }
+
+        .rrbArrow {
+            width: 12px !important;
+        }
+
+        &.rrbDualImage {
+            .rrbArrow {
+                width: 20px !important;
+                right: 1px;
+            }
+        }
+
+        &.rrbDualImage.rrbSmallButton {
+            .rrbArrow {
+                width: 12px !important;
+            }
+        }
+
+        &.rrbLargeButton {
+            .rrbArrow {
+                width: 100% !important;
+                border: 0 !important;
+            }
+        }
+    }
+
+    .rrbMenu {
+        margin: 2px 0 0 2px;
+
+        .rrbImagePlaceholder {
+
+            & + .rrbText {
+            }
+        }
+    }
+
+    .rrbText {
+        font-weight: 600;
+    }
+
+    .rrbImagePlaceholder {
+        z-index: 1;
+    }
+
+    .radIcon {
+        font-family: "Material Icons" !important;
+    }
+
+    .radIcon:hover {
+    }
+
+    div.rrbCommandGroup {
+        height: 98px;
+        min-width: 50px;
+        padding: 0 2px;
+        position: relative;
+        margin-right: 2px;
+        overflow: visible;
+
+        &:before {
+            padding: 10px 0 !important;
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            width: 2px;
+            height: 68%;
+            position: absolute;
+            top: 5px;
+            right: -3px;
+            z-index: 1;
+        }
+
+        .rrbControlGroup {
+            height: 78px;
+        }
+
+        .rrbTitle {
+            width: 100%;
+            margin: 0;
+            font-weight: 600 !important;
+            font-size: 0.95em !important;
+            text-transform: uppercase;
+            padding: 0 2px;
+            height: 20px;
+            line-height: 20px;
+            position: relative;
+            vertical-align: bottom;
+            text-overflow: inherit;
+            left: 0;
+            box-sizing: border-box;
+        }
+    }
+
+    .rrbMediumButton {
+        &.rrbMenuButton {
+            .rrbText {
+                margin-left: 25px;
+                padding-right: 13px;
+                z-index: 1;
+                position: relative;
+                background: transparent !important;
+            }
+        }
+
+        .rrbText {
+            margin-left: 25px;
+            padding-right: 3px;
+        }
+    }
+
+    .rrbLargeButton {
+        height: 68px !important;
+        padding: 4px 2px !important;
+
+        .rrbText {
+            padding: 0px 13px 4px;
+        }
+
+        .rrbImagePlaceholder {
+            top: 1em !important;
+
+            img.rrbImage {
+                height: 32px;
+                width: 32px;
+            }
+        }
+
+        .radIcon {
+            top: 0px !important;
+        }
+    }
+
+    div.rrbCollapsedGroup {
+        height: 78px;
+
+        .rrbIcon {
+            height: 32px;
+            width: 32px;
+            border: 0 !important;
+            background-size: 32px;
+            margin-top: 10px;
+        }
+
+        .rrbTitle {
+            font-size: 1em;
+            margin: 0;
+        }
+    }
+}
+
+.rrbMediumButton img.rrbImage,
+.rrbSmallButton img.rrbImage {
+    height: 16px;
+    width: 16px;
+}
+
+span#lnkPrevInstance,
+span#lnkNextInstance {
+    img.rrbImage {
+        padding: 0 10px 4px 0px;
+    }
+}

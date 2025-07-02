@@ -1,0 +1,770 @@
+﻿#splitter[data-container="workflow-editor"] {
+    max-width: calc(100% - 1px) !important;
+    overflow: hidden;
+    min-width: 100% !important;
+
+    ul.tabstrip-ul {
+        font-size: 0; // to reduce the space between each tabs
+        li.tabstrip-li {
+            font-size: 12px;
+
+            & > label {
+                height: 30px;
+                line-height: 30px;
+                vertical-align: top;
+                padding: 0 10px !important;
+                margin-top: 2px;
+
+                & + div#scrollable, & + div#shape-container {
+                    top: 32px !important;
+                }
+            }
+        }
+    }
+}
+
+#middle {
+    &.k-pane {
+        margin-top: 1px;
+    }
+}
+
+/*expression table */
+table#expressions-list {
+    border: none;
+
+    thead {
+        tr.exp-row {
+
+            th {
+                height: 34px;
+                vertical-align: middle;
+                font-weight: 600;
+
+                label {
+                }
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            td {
+                padding: 0 5px;
+            }
+
+            &:hover, &:focus > td {
+            }
+        }
+    }
+}
+
+
+div#full-ui {
+    input[type="text"], select {
+        width: 250px;
+        box-sizing: border-box;
+        min-height: 24px;
+        max-height: 24px;
+    }
+
+    div.k-widget.k-multiselect.k-header.k-multiselect-clearable {
+        width: 255px;
+    }
+
+    div#InputParameters {
+        input[type="text"] , select {
+            display: inline;
+            width: auto;
+        }
+
+        div {
+            label:nth-child(2) {
+                display: block;
+            }
+            select.select {
+                display: block;
+                margin-bottom: 5px;
+            }
+        }
+
+        label {
+            width: auto;
+            left: 0px;
+        }
+
+        button {
+            left: -7px;
+            position: relative;
+        }
+    }
+}
+
+.line-break {
+    width: 225px !important;
+}
+.line-break+ button{
+    margin-left:-3px;
+}
+/*expression table */
+div.radio-list {
+    display: block;
+
+
+    span {
+        display: inline-block;
+
+        input {
+            display: inline;
+
+            &[type="radio"] {
+                display: inline-block !important;
+                margin-top: 0;
+                vertical-align: middle;
+            }
+        }
+
+        label {
+            display: inline;
+            font-size: 1em;
+            font-weight: 600;
+            vertical-align: middle;
+            margin: 0 6px 0 2px;
+        }
+    }
+}
+
+div#stage-dialog {
+    div:not([class]) {
+        label {
+            width: 103px;
+            word-break: break-all;
+            vertical-align: middle;
+        }
+    }
+
+    input[type="radio"] {
+        display: inline-block;
+        margin-left: -22px;
+    }
+}
+
+div.k-pane#right {
+    button#apply-button {
+        margin-top: 2px;
+    }
+
+    button {
+        font-size: 12px;
+    }
+
+    button#newAction {
+        margin-top: 2px;
+        width: 66px;
+    }
+
+    button#newifelse {
+        margin-top: 2px;
+        width: 90px;
+    }
+
+    select option {
+        font-size: 12px;
+    }
+}
+
+ul.tabstrip-ul {
+    li.tabstrip-li {
+        label[for^='tabstriptab'] {
+            &:after {
+                position: absolute;
+                content: "";
+                height: 20px;
+                width: 1px;
+                margin-left: 10px;
+                top: 7px;
+            }
+
+            div#scrollable {
+                top: 20px;
+            }
+        }
+
+        input[type="radio"]:checked + label {
+            &:after {
+                display: none !important;
+            }
+        }
+    }
+}
+
+a[data-toggle="tooltip"] {
+    margin-right: 6px;
+    position: relative;
+    left: 290px;
+    float:left;
+
+    img {
+        vertical-align: middle !important;
+    }
+}
+
+div.not-endStage {
+    * {
+        vertical-align: top;
+    }
+
+    &.mw-customcheckbox {
+        display: block;
+    }
+
+    div.k-multiselect {
+        width: 308px;
+    }
+}
+
+div#divResourcePicker {
+    font-size: 1.1em;
+
+    div#divExpressions {
+        padding: 5px;
+    }
+
+    div#divHostParameters {
+        padding: 5px;
+    }
+
+    div:last-child {
+        position: absolute;
+        bottom: 5px;
+    }
+
+    div {
+        select {
+            width: 90%;
+        }
+    }
+}
+
+table[id$='_ExpDesigner_tblParameters'] {
+    padding-bottom: 0px !important;
+
+    tr[id$='_ExpDesigner_trResource'] {
+        table[id$='grdMainOutputParameters_main'] {
+            height: 202px !important;
+
+            div[id$='grdMainOutputParameters_div'] {
+                height: 202px !important;
+            }
+        }
+    }
+}
+
+div[id$="appWorkflowUserOverriding_mwgUserDetails"] {
+    margin-top: 10px !important;
+    tr.rgGroupHeader td.rgGroupCol .rgActionButton{
+        margin-top: -2px;
+    }
+}
+
+#divStageUi {
+
+    input[type="text"] {
+        display: block;
+        width: 250px;
+    }
+
+    label {
+        width: auto !important;
+    }
+
+    .k-dropdown-wrap {
+        width: 255px;
+    }
+    /*input[type="checkbox"] + label {
+        top: 8px !important;
+    }*/
+
+
+
+ 
+
+    div#formaction-dialog > div > div {
+        margin-bottom: 7px;
+    }
+    /*  div.radio-list {
+       
+    }*/
+    #sections-list {
+        margin-left: 25px;
+
+        div.radio-list {
+            margin-left: 0px;
+        }
+    }
+}
+
+#shape-ui {
+    .mw-customcheckbox {
+        display: block !important;
+    }
+
+    label {
+        position: relative;
+        left: -22px;
+    }
+
+    #activityui {
+        div {
+            margin-bottom: 7px;
+        }
+        /*        div.radio-list {
+            margin-left: 23px;
+        }
+*/
+        span.k-widget.k-dropdown.k-header {
+            display: block !important;
+        }
+
+        .mw-customcheckbox input[type="checkbox"] + label {
+            top: 6px;
+        }
+    }
+
+    div#stage-dialog > div, div#divIfBlock > div {
+        margin-bottom: 5px !important;
+
+        input.line-break {
+            min-height: 24px;
+        }
+    }
+}
+/* QueryBuilder */
+#divQueryBuilderResourcePicker {
+    label.btn {
+        width: auto;
+        display: inline-block;
+    }
+
+    select.form-control, textarea.form-control {
+        width: 180px !important;
+        height: 24px !important;
+    }
+}
+
+div#wf-definition-form {
+    font-size: 12.8px;
+
+    div.col-sm-offset-2.col-sm-8 {
+        margin-left: 26.5%;
+    }
+
+    div.col-sm-offset-2 {
+        margin-left: 25.5%;
+    }
+
+    div.col-sm-8 {
+        width: 70%;
+
+        span.form-control.k-combobox {
+            width: 106%;
+        } 
+    }
+
+    span.k-widget.form-control {
+        border: none;
+
+        input.k-input.form-control {
+            width: 100%;
+            border-radius: 0px;
+        }
+    }
+
+    label.col-sm-2.control-label {
+        font-size: 1em;
+
+        &:after {
+            content: ':';
+            top: 0px;
+            height: 20px;
+            width: 2px;
+            position: absolute;
+            padding-left: 4px;
+            right:-3px;
+        }
+    }
+
+    .checkbox label {
+        font-size: 1em;
+    }
+}
+
+div.panel {
+    div.panel-default {
+        div.category {
+            text-transform: uppercase;
+            font-size: 0.9em;
+            font-weight: 700;
+            padding-left: 5%;
+        }
+    }
+}
+
+div.panel-group {
+    div.panel {
+        border-radius: 0px;
+    }
+}
+
+.collapse.in, .collapse, .collapsing {
+    span {
+        padding-left: 10px;
+        font-size: 1em;
+        font-weight: 600 !important;
+    }
+}
+
+div#wf-definition-form textarea#workflow-description {
+    max-width: 371px;
+}
+
+.k-widget.k-window {
+    div#divExpressions, div#divHostParameters {
+        select#expression-list, select#hostParameter-list {
+            option {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+div#right.k-pane div#full-ui button#deleteElement-button{
+    vertical-align:baseline;
+}
+
+div#stage-dialog {
+    :-ms-lang(x), label {
+        font-size: 12.8px;
+    }
+
+    :-ms-lang(x), span {
+        font-size: 12.8px;
+    }
+
+    :-ms-lang(x), input {
+        font-size: 12.8px;
+    }
+
+    :-ms-lang(x), .k-multiselect-wrap.k-floatwrap {
+        font-size: 12.8px;
+    }
+}
+
+div#full-ui .workflow-info {
+    :-ms-lang(x), label {
+        font-size: 12.8px;
+    }
+}
+
+:-ms-lang(x), #action-stakeholders-list ul {
+    font-size: 12.8px;
+}
+
+:-ms-lang(x), #view-stakeholders-list ul {
+    font-size: 12.8px;
+}
+
+:-ms-lang(x), #mytask-noti-recipients-list ul {
+    font-size: 12.8px;
+}
+
+div#full-ui {
+    .performAction ~ a {
+        left: 167px !important;
+    }
+
+    .stage-name ~ a {
+        left: 47px !important;
+    }
+
+    #daysToComplete ~ a {
+        left: 120px !important;
+    }
+
+    .actionStakeHolder ~ a {
+        left: 142px !important;
+    }
+
+    .allowDelete ~ a {
+        left: 90px !important;
+    }
+
+    #RequestEmailTemplate ~ a {
+        left: 245px !important;
+    }
+
+    #ResponseEmailTemplate ~ a {
+        left: 255px !important;
+    }
+
+    #toEmail ~ a {
+        left: 23px !important;
+    }
+
+    #toCC ~ a {
+        left: 23px !important;
+    }
+
+    #selectMailTemplate ~ a {
+        left: 175px !important;
+    }
+
+    #formAttachment ~ a {
+        left: 160px !important;
+    }
+
+    #WfAttachment ~ a {
+        left: 255px !important;
+    }
+
+    #mailMerge ~ a {
+        left: 103px !important;
+    }
+
+    #emailNotify ~ a {
+        left: 170px !important;
+    }
+
+    #availableWF ~ a {
+        left: 138px !important;
+    }
+
+    #availableAction ~ a {
+        left: 118px !important;
+    }
+
+    #notes ~ a {
+        left: 46px !important;
+    }
+
+    .availableForm ~ a {
+        left: 112px !important;
+    }
+
+    #availableResource ~ a {
+        left: 135px !important;
+    }
+
+    #field ~ a {
+        left: 45px !important;
+    }
+
+    #status ~ a {
+        left: 48px !important;
+    }
+
+    #dueDate ~ a {
+        left: 65px !important;
+    }
+
+    .viewStakeHolder ~ a {
+        left: 133px !important;
+    }
+
+    #roles ~ a {
+        left: 45px !important;
+    }
+
+    #message ~ a {
+        left: 65px !important;
+    }
+
+    #messageType ~ a {
+        left: 95px !important;
+    }
+
+    #checklist ~ a {
+        left: 133px !important;
+    }
+
+    #formEdit ~ a {
+        left: 110px !important;
+    }
+
+    #sendEmail a {
+        left: 208px !important;
+    }
+
+    #showStages a {
+        left: 159px !important;
+    }
+
+    #commentsMandatory a {
+        left: 212px !important;
+        margin-top: 2px;
+    }
+
+    #ifConditionTooltip {
+        left: 70px !important;
+    }
+
+    #actionStakeHolder ~ a {
+        left: 141px !important;
+    }
+
+    :-ms-lang(x), #ifConditionTooltip {
+        left: 65px !important;
+    }
+
+    :-ms-lang(x), #resource-button {
+        margin-left: -2px !important;
+    }
+
+    #resource-button {
+        position: absolute;
+        padding-bottom: 3px;
+        margin-left: -3px !important;
+        height: 18px;
+        width: 12px;
+    }
+
+    #btn_ActionStakeHolders {
+        position: absolute;
+        padding-bottom: 3px;
+        margin-left: -3px !important;
+    }
+
+    #btn_ViewStakeHolders {
+        position: absolute;
+        padding-bottom: 3px;
+        margin-left: -3px !important;
+    }
+
+    #btn_Message {
+        position: absolute;
+        padding-bottom: 3px;
+        margin-left: -3px !important;
+    }
+
+    #clientClick ~ a {
+        left: 103px !important;
+    }
+
+    :-ms-lang(x), #commentsMandatory a {
+        left: 195px !important;
+        margin-top: 3px !important;
+    }
+
+    :-ms-lang(x), .allowDelete ~ a {
+        margin-top: 1px;
+        left: 90px !important;
+    }
+
+    :-ms-lang(x), #sendEmail a {
+        margin-top: 2px;
+    }
+
+    :-ms-lang(x), #showStages a {
+        margin-top: 2px;
+    }
+
+    :-ms-lang(x), #selectMailTemplate ~ a {
+        left: 155px !important;
+    }
+
+    :-ms-lang(x), #formAttachment ~ a {
+        left: 143px !important;
+    }
+
+    :-ms-lang(x), #WfAttachment ~ a {
+        left: 225px !important;
+    }
+
+    :-ms-lang(x), #emailNotify ~ a {
+        left: 151px !important;
+    }
+
+    :-ms-lang(x), .performAction ~ a {
+        left: 146px !important;
+    }
+
+    :-ms-lang(x), #mailMerge ~ a {
+        left: 95px !important;
+    }
+
+    :-ms-lang(x), .availableForm ~ a {
+        left: 98px !important;
+    }
+
+    :-ms-lang(x), .stage-name ~ a {
+        left: 44px !important;
+    }
+
+    :-ms-lang(x), #status ~ a {
+        left: 45px !important;
+    }
+
+    :-ms-lang(x), #availableResource ~ a {
+        left: 120px !important;
+    }
+
+    :-ms-lang(x), #dueDate ~ a {
+        left: 57px !important;
+    }
+
+    :-ms-lang(x), .actionStakeHolder ~ a {
+        left: 128px !important;
+    }
+
+    :-ms-lang(x), .viewStakeHolder ~ a {
+        left: 117px !important;
+    }
+
+    :-ms-lang(x), #roles ~ a {
+        left: 40px !important;
+    }
+
+    :-ms-lang(x), #message ~ a {
+        left: 57px !important;
+    }
+
+    :-ms-lang(x), #messageType ~ a {
+        left: 84px !important;
+    }
+
+    :-ms-lang(x), #checklist ~ a {
+        left: 117px !important;
+    }
+
+    :-ms-lang(x), #availableWF ~ a {
+        left: 125px !important;
+    }
+
+    :-ms-lang(x), #availableAction ~ a {
+        left: 108px !important;
+    }
+
+    #formStatus_allowDelete ~ a {
+        left: 90px !important;
+    }
+
+    :-ms-lang(x), #formStatus_allowDelete ~ a {
+        left: 80px !important;
+    }
+
+    :-ms-lang(x), #clientClick ~ a {
+        left: 93px !important;
+    }
+
+    :-ms-lang(x), #view_Stake_Holder ~ a {
+        left: 131px !important;
+    }
+
+    #view_Stake_Holder ~ a {
+        left: 132px !important;
+    }
+
+    #formDivision ~ a {
+        left: 223px !important;
+    }
+}

@@ -1,0 +1,402 @@
+﻿@import "checkbox-common.less";
+
+/*mixin for center aligned checkbox*/
+.genericCenterCheckboxDesign {
+    display: inline-block !important;
+    opacity: 0;
+    z-index: 1001;
+    cursor: pointer;
+    margin: 0 !important;
+    position: absolute;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%);
+
+    & + label {
+        z-index: 1000;
+        height: 16px !important;
+        width: 16px !important;
+        max-width: 16px !important;
+        padding: 0 !important;
+        margin: 0;
+        position: absolute;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%);
+
+        &:before {
+            margin: 0;
+            position: absolute;
+            top: 50% !important;
+            left: 50% !important;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+
+/*List Page header checkbox*/
+div.RadGrid.MWGrid .rgMasterTable.MWGrid-ShowEmptyCells-ie11-fix thead tr th.rgHeader.rgCheck {
+
+    &:first-child {
+        border-left: none !important;
+    }
+
+    .genericCheckboxDesign;
+
+    input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+        display: block !important;
+        z-index: 1001;
+        opacity: 1;
+        cursor: pointer;
+        position: relative;
+        margin: auto;
+        top: 0;
+        left: 0 !important;
+
+        & + label.radgrid-cb-label {
+            display: none;
+        }
+    }
+}
+//MOve to checkbox-common.less
+/*filter popup checkbox - grid checkboxes*/
+.ui-dialog {
+    #divFilterManagerGrid {
+        table[role="grid"] {
+            tr[role="row"] {
+                td[role="gridcell"] {
+                    span.mw-customcheckbox {
+                        position: relative;
+                        width: 50px;
+
+                        input[type="checkbox"] {
+                            opacity: 0;
+                            top: 12px !important;
+                            left: 25px !important;
+
+                            & + label {
+                                top: 4px !important;
+                                left: 7px !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*CSScode to adjust for IE lag fixes*/
+
+.mw-design#coreMainControlDiv #radgridParentContainer {
+    div.RadGrid .rgMasterTable.rgClipCells.MWGrid-ShowEmptyCells-ie11-fix {
+
+        th.rgHeader.rgCheck {
+            input[type="checkbox"] {
+                top: 0px !important;
+                margin-left: 6px !important;
+                z-index: 1;
+            }
+        }
+
+        thead tr.rgFilterRow > td {
+            input[type="checkbox"] {
+                opacity: 1;
+                z-index: 1;
+                margin-left: 0px !important;
+                margin: 0px !important;
+
+                & + input[type="submit"].rgFilter {
+                    float: right;
+                }
+            }
+        }
+
+        tbody {
+            tr.rgRow, tr.rgAltRow {
+                td {
+                    font-weight: 600;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    position: relative;
+
+                    span.aspNetDisabled {
+                        .genericCheckboxDesign;
+                        z-index: 1;
+
+                        input[type="checkbox"] {
+                            .genericCenterCheckboxDesign;
+                            opacity: 1;
+                            position: absolute;
+                            left: 50% !important;
+                            top: 16px !important;
+                        }
+                    }
+                }
+
+                td.multiselect-column {
+                    position: relative;
+                    .genericCheckboxDesign;
+
+                    input[type="checkbox"] {
+                        .genericCenterCheckboxDesign;
+                        opacity: 1;
+                        top: 16px !important;
+
+                        & + label {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            tr.rgRow.rgSelectedRow, tr.rgAltRow.rgSelectedRow {
+                td {
+                    padding-left: 7px;
+                }
+            }
+        }
+    }
+}
+
+/*List Pages*/
+/*.mw-design#coreMainControlDiv #radgridParentContainer div.RadGrid .rgMasterTable.rgClipCells.MWGrid-ShowEmptyCells-ie11-fix tbody tr.rgRow td.multiselect-column,
+.mw-design#coreMainControlDiv #radgridParentContainer div.RadGrid .rgMasterTable.rgClipCells.MWGrid-ShowEmptyCells-ie11-fix tbody tr.rgAltRow td.multiselect-column {
+    .genericCheckboxDesign;
+
+    input[type="checkbox"] {
+        display: block !important;
+        z-index: 1001;
+        opacity: 1;
+        cursor: pointer;
+        position: relative;
+        margin: auto;
+        top: 0px;
+        left: 0 !important;
+
+        & + label.radgrid-cb-label {
+           display: none;
+        }
+    }
+}*/
+
+/*strategic goals and objectives header*/
+div.RadGrid {
+    table.rgMasterTable {
+        &.rgClipCells {
+
+            tbody {
+                tr.rgRow, tr.rgAltRow {
+                    td {
+                        .genericCheckboxDesign;
+
+                        input[type="checkbox"] {
+                            opacity: 1;
+                            height: 16px;
+                            width: 16px;
+                            display: block !important;
+                            z-index: 1001;
+                            cursor: pointer;
+                            position: relative;
+                            margin-left: 3px !important;
+                            left: 1px !important;
+                            top: 0px;
+
+                            & + label.radgrid-cb-label {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+
+            th.rgHeader.rgCheck {
+                .genericHeaderCheckboxDesign;
+
+
+
+                input[type="checkbox"] {
+                    display: inline-block !important;
+                    z-index: 1001;
+                    opacity: 0;
+                    cursor: pointer;
+                    position: relative;
+                    left: 0px !important;   
+                    top: 7px;
+
+
+
+                    & + label.radgrid-cb-label {
+                        height: 16px !important;
+                        min-width: 16px !important;
+                        padding: 0 !important;
+                        display: block;
+                        top: -12px;
+                        left: 3px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* popup , merge and email*/
+.ui-dialog span.cbC {
+    input[type=checkbox] {
+        .genericCenterCheckboxDesign;
+        z-index: 1009;
+        left: 8px !important;
+        top: 12px !important;
+
+        & + label {
+            z-index: 1001;
+            left: 8px !important;
+            top: 12px !important;
+            /*color: transparent;*/
+        }
+
+        &[id*="MailMergeAndEmailControl"],
+        &[id*="MailMergeAndAttachControl"] {
+            z-index: 9999;
+        }
+    }
+}
+
+
+/*workflow users header checkbox*/
+.ui-dialog div.RadGrid.MWGrid .rgMasterTable.MWGrid-ShowEmptyCells-ie11-fix thead tr th.rgHeader.rgCheck input[type=checkbox] {
+    display: block !important;
+    z-index: 1001;
+    opacity: 0;
+    cursor: pointer;
+    position: relative;
+    margin: auto;
+    top: 9px;
+    left: 0 !important;
+
+
+
+    & + label.radgrid-cb-label {
+        height: 16px !important;
+        width: 16px !important;
+        max-width: 16px !important;
+        margin: 0 auto;
+        padding: 0 !important;
+        display: block;
+        top: -7px;
+        left: -1px;
+    }
+}
+
+div.RadGrid table.rgMasterTable.rgClipCells tbody tr.rgRow td,
+div.RadGrid table.rgMasterTable.rgClipCells tbody tr.rgAltRow td {
+    vertical-align: middle !important;
+    .genericCheckboxDesign;
+
+    input[type="checkbox"] {
+        display: block !important;
+        z-index: 1001;
+        opacity: 0;
+        cursor: pointer;
+        position: relative;
+        margin-left: 3px !important;
+        left: 1px !important;
+        top: 8px;
+
+        & + label.radgrid-cb-label {
+            height: 16px !important;
+            min-width: 16px !important;
+            padding: 0 !important;
+            display: block;
+            top: -11px;
+            left: 4px;
+        }
+    }
+}
+
+
+.hGridTable div.headerdiv table.nodetable td.hgHeader,
+.hGridTable div.datadiv table.nodetable tr.hrRow td {
+    .genericCheckboxDesign;
+
+    label.radgrid-cb-label {
+        display: none !important;
+    }
+
+    input[type="checkbox"] {
+        .genericCenterCheckboxDesign;
+        height: 16px !important;
+        width: 16px !important;
+        z-index: 1;
+        opacity: 1;
+
+        &:hover, &:disabled {
+            border: none !important;
+        }
+    }
+
+
+    :-ms-lang(x), input[type="checkbox"] {
+        top: 16px !important;
+        
+        &:hover, &:disabled {
+            border: none !important;
+        }
+    }
+}
+/*Contract items, bid items filter row*/
+.hGridTable div.headerdiv table.nodetable tr.FilterRow td {
+    .genericCheckboxDesign;
+    position: relative !important;
+
+    input[type="checkbox"] {
+        height: 16px !important;
+        width: 16px !important;
+        display: inline-block;
+        z-index: 1;
+        opacity: 1;
+        position: absolute;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%,-50%);
+        margin-right: calc(90% - 60px) !important;
+
+        & + label.radgrid-cb-label {
+            display: none !important;
+        }
+
+        &:hover, &:disabled {
+            border: none !important;
+        }
+    }
+
+    :-ms-lang(x), input[type="checkbox"] {
+        top: 15px !important;
+
+        & + label {
+            display: none !important;
+        }
+
+        &:hover, &:disabled {
+            border: none !important;
+        }
+    }
+}
+
+/*UAT list page checkbox issue fixed*/
+:-ms-lang(x), .mw-design#coreMainControlDiv #radgridParentContainer div.RadGrid .rgMasterTable.rgClipCells.MWGrid-ShowEmptyCells-ie11-fix tbody tr.rgAltRow td span.aspNetDisabled input[type="checkbox"],
+:-ms-lang(x), .mw-design#coreMainControlDiv #radgridParentContainer div.RadGrid .rgMasterTable.rgClipCells.MWGrid-ShowEmptyCells-ie11-fix tbody tr.rgRow td span.aspNetDisabled input[type="checkbox"] {
+    z-index: 0;
+}
+
+.ui-dialog.ui-widget {
+    td.tdTextValue.empty-cbtext {
+        span.cbC {
+            height: 24px;
+            margin-bottom: 10px !important;
+        }
+    }
+}

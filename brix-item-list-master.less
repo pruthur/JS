@@ -1,0 +1,586 @@
+﻿.mw-design#coreMainControlDiv {
+    .mw-design.main-menu-option {
+        .mw-design.each-main-row {
+            padding: 5px 20px 10px;
+            display: block;
+
+            td {
+                font-weight: 600;
+
+                img {
+                    height: 32px;
+                    width: 32px;
+                    padding-right: 5px;
+                    position: relative;
+                    top: 10px;
+                }
+            }
+
+            .loginLinksH2 {
+                font-size: 1.1em;
+                font-weight: 600;
+                color: #214169;
+            }
+
+            .mw-design.message {
+                padding-left: 40px;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.liUnSelected, .aUnSelected {
+    font-weight: 600;
+}
+
+#HeaderTableID.nodetable {
+    > tbody > tr {
+        &:first-child {
+            height: 33px;
+
+            td {
+            }
+        }
+
+        &.FilterRow {
+            height: 30px !important;
+        }
+    }
+}
+
+.hGridTable {
+    #topGridDiv {
+        margin-top: -1px;
+    }
+
+    div.headerdiv {
+        a.Hierarchical-grid-header {
+            text-decoration: none;
+        }
+
+        table.nodetable {
+            td.hgHeader {
+                border: none;
+                padding: 0 5px;
+
+                &[is-numeric-column="true"] {
+                    text-align: right;
+
+                    div.headerDiv {
+                        a.Hierarchical-grid-header {
+                            padding-right: 4px;
+                        }
+                    }
+                }
+            }
+
+            tr.FilterRow {
+                td {
+                    border: none;
+                    padding: 0 5px;
+
+                    &[datatype="dateTime"] {
+                        overflow: hidden;
+
+                        .RadPicker {
+                            width: -moz-calc(100% - 30px) !important; /* Firefox */
+                            width: -webkit-calc(100% - 30px) !important; /* WebKit */
+                            width: -o-calc(100% - 30px) !important; /* Opera */
+                            width: calc(100% - 30px) !important; /* Standard */
+                        }
+
+                        input[id$="Filter_Name"] {
+                            float: right;
+                            margin-top: 3px;
+                        }
+                    }
+
+                    input.FilterBox {
+                        vertical-align: middle;
+                        width: calc(100% - 32px) !important;
+
+                        & ~ input[type="submit"] {
+                            height: 22px;
+                            margin-bottom: 0px;
+                            margin-left: 3px;
+                            width: 24px !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    div.datadiv {
+        table.nodetable {
+            tr {
+                img {
+                    &.expand-collapse-icon {
+                        width: 11px;
+                        height: 11px;
+                        margin-right: 5px;
+
+                        & ~ img {
+                            margin-right: 5px;
+                            height: 16px;
+                            width: 16px;
+                        }
+                    }
+
+                    &.folder-icon {
+                        width: 16px;
+                        height: auto;
+                    }
+                }
+            }
+
+            tr.hrRow {
+                border: none;
+                height: 34px;
+                padding: 0 5px;
+
+                td {
+                    border: none;
+                    font-weight: 600;
+                    padding: 0 5px;
+
+                    img {
+                        padding-top: 5px !important;
+                        display: inline-block;
+                        margin-right: 5px;
+
+                        & + img {
+                            padding-top: 3px !important;
+                        }
+                    }
+                }
+
+                input[type="text"] {
+                    padding: 0 2px;
+                    width: 94% !important;
+                    display: block;
+                    margin: 0 auto !important;
+                }
+            }
+
+            tr[id^="STR_"] {
+                height: 34px !important;
+            }
+        }
+    }
+}
+
+
+/*Enterprise search*/
+div.RadGrid .rgMasterTable tr.rgPager,
+tr.rgPager {
+    & > td {
+        border: none !important;
+    }
+
+    .rgStatus {
+        border: none !important;
+        padding: 0 !important;
+
+        ~ .rgInfoPart {
+            padding: 0 !important;
+            line-height: 30px;
+            font-size: 1em;
+            color: #000 !important;
+            font-weight: 600;
+
+            strong {
+                font-size: 1em;
+                font-weight: 600;
+                color: #000 !important;
+            }
+        }
+    }
+
+    td.rgPagerCell.NextPrevAndNumeric {
+        border: 0 !important;
+    }
+}
+
+td.rgPagerCell {
+    div.NextPrevAndNumeric {
+        div.rgStatus {
+            border: none;
+        }
+
+        .rgWrap {
+            .rgActionButton {
+                height: 24px;
+                width: 24px;
+                border-radius: 3px;
+                padding: 0 2px 0 2px;
+                box-sizing: border-box;
+                margin: 0 2px 0 2px !important;
+
+                span.rgIcon {
+                    font-family: 'mw-icons' !important;
+                }
+
+                span.t-ripple-container {
+                    display: none;
+                }
+            }
+
+            &.rgNumPart {
+                a {
+                    height: 24px;
+                    min-width: 24px;
+                    border-radius: 3px;
+                    padding: 0 2px 0 2px;
+                    box-sizing: border-box;
+                    margin: 0 2px 0 2px !important;
+                }
+
+                a.rgCurrentPage {
+                }
+            }
+        }
+    }
+}
+
+/*Add Standard item*/
+tfoot {
+    tr.rgPager {
+        td.rgPagerCell {
+
+            div.NumericPages {
+                div.rgStatus {
+                    border: none;
+                }
+
+                div.rgWrap {
+                    &.rgNumPart {
+                        a {
+                            height: 24px;
+                            width: 24px;
+                            padding: 0 2px 0 2px;
+                            box-sizing: border-box;
+                            margin: 0 2px 0 2px !important;
+                        }
+
+                        a.rgCurrentPage {
+                            border-radius: 3px;
+                        }
+                    }
+
+                    &.rgInfoPart {
+                        strong {
+                            padding-left: 2px;
+                            padding-right: 2px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*Add Standard item*/
+
+/*Search documents, items list*/
+td.rgPagerCell.NextPrevAndNumeric {
+    display: block;
+
+    .rgWrap {
+        &.rgArrPart1, &.rgArrPart2 {
+            input {
+                border-radius: 3px;
+                height: 24px !important;
+                min-width: 24px;
+                margin: 0 2px 0 2px !important;
+
+                &:hover {
+                }
+            }
+        }
+
+        &.rgNumPart {
+            a {
+                height: 24px;
+                min-width: 24px;
+                padding: 0px 2px 0px 2px !important;
+                margin: 0 2px 0 2px !important;
+                box-sizing: border-box;
+
+                span {
+                    display: block;
+                    float: none;
+                    text-align: center;
+                    padding: 0;
+                }
+            }
+
+            a.rgCurrentPage {
+                background: none;
+                border-radius: 3px;
+
+                span {
+                    background: none;
+                    border: none;
+                }
+            }
+
+            span[currentpage="yes"] {
+                a.rgCurrentPage {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+.RadGrid_Material {
+    .rgPagerCell {
+        .rgPagerLabel {
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
+            font-size: 12px !important;
+        }
+
+        .RadComboBox {
+            border: 1px solid #dcdee0;
+
+            span.rcbInner {
+                border: transparent !important;
+                padding: 3px !important;
+            }
+        }
+    }
+
+    .rgMasterTable {
+        border-collapse: separate !important;
+    }
+}
+
+.RadComboBox_Material .rcbActionButton {
+    height: 12px !important;
+    padding: 1px !important;
+}
+/*Search documents*/
+/* checklist pagination*/
+table#tblPager.borderAll {
+    td {
+        background: none !important;
+
+        table {
+            width: auto !important;
+            border-spacing: 4px;
+            border-collapse: separate;
+
+            td {
+                text-align: center;
+
+                &[align="center"] {
+                }
+
+                input[type="image"] {
+                    &:hover {
+                        opacity: 0.6;
+                    }
+
+                    &[disabled="disabled"] {
+                        opacity: 1;
+                    }
+                }
+
+                input[type="text"] {
+                    padding-top: 2px;
+                    padding-bottom: 2px;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+/* checklist pagination*/
+
+/*popup virtual pagination*/
+.ui-dialog {
+    .ui-dialog-content {
+        .k-pager-wrap.k-grid-pager {
+            .k-link {
+                border-radius: 3px;
+                width: 24px;
+                height: 24px;
+                border: none;
+                margin-left: 2px;
+                margin-right: 2px;
+
+                &:hover {
+                }
+
+                &.k-state-disabled {
+                    opacity: 1;
+                }
+            }
+
+            ul.k-pager-numbers {
+                li {
+                    a.k-link {
+                        border: none !important;
+                        font-weight: 600;
+                        font-size: 12px;
+
+                        &:hover {
+                        }
+                    }
+
+                    span {
+                        font-weight: 600;
+
+                        &.k-state-selected {
+                            border-radius: 3px !important;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .ui-dialog {
+        .ui-dialog-content {
+            .k-pager-wrap.k-grid-pager {
+
+                .k-link {
+                    text-align: center;
+                    padding: 0;
+                    width: 24px;
+                    height: 24px;
+                    margin-right: 2px;
+                    margin-left: 2px;
+                    border-radius: 3px !important;
+                }
+
+                ul.k-pager-numbers {
+                    margin-left: 5px !important;
+                    z-index: 9999;
+
+                    & + a.k-link.k-pager-nav {
+                        margin-left: 28px;
+                    }
+
+                    li {
+                        span.k-state-selected {
+                            text-align: center;
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*popup virtual pagination*/
+
+table#tblPager {
+    tr td {
+        input[type="text"] {
+            pointer-events: none;
+        }
+    }
+}
+
+/*Enterprise map viewer*/
+div#ENTMAPV_ProjectsGrid_id, #DELAUTH_CDGProjects_id, #DELAUTH_CDGContracts_id {
+    .k-pager-wrap.k-grid-pager {
+        .k-link {
+            box-sizing: border-box;
+            border-radius: 3px;
+            width: 24px;
+            height: 24px;
+            line-height: 24px;
+            border: none;
+            margin-left: 2px;
+            margin-right: 2px;
+
+            &.k-state-disabled {
+                opacity: 1;
+            }
+
+            span.k-icon {
+                margin-top: -3px !important;
+            }
+        }
+
+        ul.k-pager-numbers {
+            li {
+                a.k-link {
+                    border: none !important;
+                    font-weight: 600;
+                    font-size: 12px;
+                }
+
+                span {
+                    font-weight: 600;
+
+                    &.k-state-selected {
+                        box-sizing: border-box;
+                        border-radius: 3px !important;
+                        cursor: pointer;
+                        height: 24px;
+                        width: 24px;
+                        line-height: 22px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1024px) {
+    div#ENTMAPV_ProjectsGrid_id, #DELAUTH_CDGProjects_id, #DELAUTH_CDGContracts_id {
+        .k-pager-wrap.k-grid-pager {
+
+            .k-link {
+                text-align: center;
+                padding: 0;
+                width: 24px;
+                height: 24px;
+                margin-right: 2px;
+                margin-left: 2px;
+                border-radius: 3px !important;
+            }
+
+            ul.k-pager-numbers {
+                margin-left: 5px !important;
+                z-index: 999;
+
+                & + a.k-link.k-pager-nav {
+                    margin-left: 40px;
+                }
+
+                li {
+                    span.k-state-selected {
+                        text-align: center;
+                        padding: 0;
+                    }
+                }
+
+                &.k-state-expanded {
+                    border-width: 1px 1px 1px 1px !important;
+                    li.k-current-page {
+                        padding-bottom: 4px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#headerTbl {
+    td[mw-hgrid-checkbox-header="true"] {
+        text-align: center;
+    }
+}

@@ -1,0 +1,464 @@
+﻿div#Tab_ByRoles {
+    .k-dropdown-wrap.k-state-default {
+        input.clsRoles.k-input[type="text"], input.copyRoles.k-input[type="text"] {
+            width: 172px !important;
+            padding-left: 0 !important;
+
+            &:focus {
+            }
+        }
+    }
+
+    input.k-button {
+        margin-top: 1px;
+    }
+}
+
+.k-widget.k-header {
+    .k-dropdown-wrap.k-state-default {
+        border-radius: 0;
+    }
+}
+
+.ui-jqgrid {
+    &.ui-widget.ui-widget-content.ui-corner-all {
+        margin-top: -3px !important;
+    }
+
+    .tree-minus {
+        margin-top: 3px;
+    }
+
+    div.ui-icon {
+        background: none;
+        position: relative;
+
+        &.tree-plus {
+            transform: rotateZ(-90deg);
+        }
+
+        &[class*='ui-icon-triangle'] {
+            top: 8px !important;
+            &:before {
+                content: '';
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 7px 5px 0 5px;
+                border-color: #818689 transparent transparent transparent;
+                position: absolute;
+                /*top: 3px;*/
+                left: 0;
+            }
+        }
+    }
+
+    .ui-icon-radio-off {
+        background-image: none !important;
+        height: 10px !important;
+        width: 10px !important;
+        border-radius: 50%;
+        /*margin-top: 5px;
+        top: 3px;*/
+    }
+}
+
+
+.ui-jqgrid-htable {
+
+    tr.ui-search-toolbar {
+        th[role="columnheader"] {
+            margin: 0 !important;
+            vertical-align: middle;
+            padding-top: 0 !important;
+
+            table.ui-search-table {
+                padding: 0 3px 0 7px;
+
+                tr {
+                    td.ui-search-input {
+                        text-align: left;
+
+                        input[type="text"] {
+                            box-sizing: border-box;
+                            width: 100%;
+                            height: 24px;
+                        }
+                    }
+                }
+            }
+        }
+
+        td.ui-search-clear {
+            a.clearsearchclass {
+                font-size: 14px;
+                position: absolute;
+                top: 2px;
+                left: 8px;
+            }
+        }
+    }
+}
+
+ul.ui-autocomplete.ui-widget-content {
+    li.ui-menu-item[role="presentation"] {
+        a.ui-corner-all {
+            font-size: 0.9em;
+            font-weight: 100;
+
+            &:hover {
+                border-radius: 0;
+                border: none;
+            }
+        }
+    }
+}
+
+.rddtPopup.rddtPopup_Default {
+    width: 200px !important; /*made 250 to 200 as fix of 405665*/
+}
+
+
+div#Tab_ByForms {
+    .jqgrow td[role="gridcell"] .tree-wrap .ui-icon[class*="ui-icon-triangle"] {
+        display: none !important;
+    }
+
+    div[id$="FormsInnerTabs_PageTabs"] {
+        padding-top: 0px;
+
+        div.officebar {
+            padding-top: 0px;
+
+            ul[id$="FormsInnerTabs_tabBar"] {
+                .mw-tabs;
+                padding-top: 3px;
+            }
+        }
+    }
+
+    table {
+        tr {
+            td {
+                vertical-align: top;
+            }
+        }
+    }
+
+    .tdTextAlignRgt {
+        vertical-align: middle !important;
+
+        &:after {
+            top: 3px !important;
+        }
+
+        span {
+            margin-top: -10px !important;
+        }
+    }
+}
+
+:-ms-lang(x), div#Tab_ByForms .tdTextAlignRgt span {
+    margin-top: -8px !important;
+}
+
+
+:-ms-lang(x), div#Tab_ByForms .tdTextAlignRgt:after {
+    top: 4px !important;
+}
+
+div#Tab_ByRoles {
+    table {
+        tr {
+            td {
+                vertical-align: top;
+            }
+        }
+    }
+
+    div[id$="RolesInnerTabs_PageTabs"] {
+        div.officebar {
+            ul[id$="RolesInnerTabs_tabBar"] {
+                .mw-tabs;
+            }
+        }
+    }
+
+    .tdTextAlignRgt {
+        vertical-align: middle !important;
+
+        &:after {
+            top: 5px !important;
+        }
+
+        span {
+            margin-top: 2px !important;
+        }
+    }
+}
+
+:-ms-lang(x), div#Tab_ByRoles .tdTextAlignRgt:after {
+    top: 5px !important;
+}
+
+#permissionsMasterContainer {
+    height: 100%;
+    overflow: hidden;
+
+    div.officebar + div [role=tabpanel] {
+        margin-top: 0 !important;
+    }
+
+    div {
+        max-height: 100%;
+
+
+        .ui-jqgrid {
+            .tree-leaf {
+            }
+
+            .ui-jqgrid-bdiv {
+                position: static;
+            }
+        }
+    }
+
+    .ui-th-column .ui-state-default,
+    .ui-th-ltr .ui-state-default,
+    .ui-state-default {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .rddtInner {
+        width: 400px !important;
+    }
+
+    div[id$="PermissionsTabs_PageTabs"] {
+        div.officebar {
+            padding-top: 10px;
+
+            ul[id$="PermissionsTabs_tabBar"] {
+                .mw-tabs;
+                padding-top: 0px;
+            }
+        }
+
+        .jqgrow {
+            td[role="gridcell"] {
+                padding: 3px 3px 3px 0 !important;
+                text-align: left !important;
+
+                .tree-wrap {
+                    left: 15px;
+                    height: 24px !important;
+
+                    .ui-icon {
+                        height: 8px !important;
+                        width: 8px !important;
+                        border-radius: 50%;
+                        top: 10px;
+                        /*margin-top: 9px;*/
+                        &[class*='ui-icon-triangle'] {
+                            height: 10px !important;
+                            width: 10px !important;
+                            border-radius: 0 !important;
+                        }
+                    }
+
+                   :-ms-lang(x), .ui-icon {
+                        top: 10px;
+                    }
+
+                    & + .cell-wrapper {
+                        .lblcheckbox {
+                            margin-left: 0 !important;
+                        }
+                    }
+                }
+
+             /*   :-ms-lang(x), .tree-wrap {
+                    & + span.cell-wrapperleaf {
+                        input[type="checkbox"] {
+                            & + label {
+                            }
+                        }
+                    }
+                }*/
+
+                div.dvfullsizeWidth {
+                    /*width: auto;*/
+                }
+
+                .dvfullsizeWidth.customPermission + div {
+                    padding-top: 1px !important;
+                }
+            }
+
+            &.ui-state-highlight td[role="gridcell"] {
+                .tree-wrap {
+                    .ui-icon {
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+table#DocPermissions[role="presentation"] {
+    div.dvfullsizeWidth {
+        /*required for displaying full caption for each permission checkbox's text*/
+        width: 25%;
+    }
+
+    tr[role="row"].jqgrow {
+        td[role="gridcell"] {
+            padding: 3px 3px 3px 0 !important;
+            text-align: left !important;
+        }
+    }
+}
+
+div[id="DirectoryTabs"] {
+    div[id$="_PageTabs"] {
+        div.officebar {
+            ul[id$="_tabBar"] {
+                .mw-tabs;
+            }
+        }
+    }
+}
+
+div.ui-layout-content {
+    div.officebar {
+        ul[role="tablist"] {
+            .mw-tabs;
+
+            a {
+                border: none;
+                padding-top: 2px;
+
+                &:hover {
+                    border: none;
+                }
+            }
+        }
+    }
+}
+
+/*expression table */
+form[action*="BuildExprForWorkflow"] {
+    div#centerContent {
+        div#toolBarAndTabContent {
+
+            div#PageTabs {
+
+                ul#PageTabs_tabBar {
+                    .mw-tabs;
+                    margin-top: 10px;
+
+                    li {
+                        a[title="Create Expression"] {
+                            border-bottom: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*expression table */
+.mw-tabs {
+    height: 32px !important;
+
+    li[role="presentation"] {
+        padding-right: 9px;
+        position: relative;
+
+        a {
+            padding: 2px 2px;
+            text-transform: capitalize;
+        }
+
+        &:last-child::after {
+            content: '';
+            position: absolute;
+            top: 5px;
+            right: -10px;
+            height: 20px;
+            width: 1px;
+        }
+    }
+
+    li.current[role="presentation"] {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+
+        &:last-child::after {
+            display: none;
+        }
+    }
+}
+
+.customPermission {
+    span {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 50px;
+        display: inline-block;
+    }
+}
+
+table#tree_Tab_ByRoles_FormPermissions tr[role="row"].jqgrow td[role="gridcell"] {
+    input[type="checkbox"] ~ label {
+      /*  span {
+            top: -2px !important;
+        }*/
+        /* &:before {
+            top: 3px !important;
+        }*/
+    }
+}
+
+table#tree_Tab_ByForms_RolePermissions tr[role="row"].jqgrow td[role="gridcell"] {
+    input[type="checkbox"] ~ label {
+     /*   span {
+            top: -2px !important;
+        }*/
+        /* &:before {
+            top: 3px !important;
+        }*/
+    }
+}
+
+table#tree_Tab_ByForms_ReportPermissions tr[role="row"].jqgrow td[role="gridcell"] {
+    input[type="checkbox"] ~ label {
+      /*  span {
+            top: -2px !important;
+        }*/
+        /*&:before {
+            top: 3px !important;
+        }*/
+    }
+}
+
+#permissionsMasterContainer table#tree_Tab_ByRoles_ReportPermissions {
+    tr.jqgrow td[role="gridcell"] {
+        padding-top: 2px !important;
+        padding-bottom: 6px !important;
+    }
+
+    div.tree-wrap div.ui-icon {
+        top: 12px
+        /*margin-top: 3px !important;*/
+    }
+
+    :-ms-lang(x), div.tree-wrap div.ui-icon {
+        top: 11px
+    }
+}
+
+

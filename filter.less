@@ -1,0 +1,145 @@
+﻿/*filter dropdown*/
+input[id$="Filter_Name"][type="submit"],
+input[id$="Filter_Name"][type="submit"],
+input.rgFilter[type="submit"],
+button.rgFilter[type="submit"] {
+    height: 24px !important;
+    margin: 0 0 0 3px;
+    border-radius: 3px !important;
+    background-image: url(/Images/Officebar/SVG/grid-filter-white.svg) !important;
+    background-size: 55%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &.rgFiltered {
+        background-image: url(/Images/Officebar/SVG/grid-filter-filtered.svg) !important;
+
+        &:hover, &:focus {
+            background-image: url(/Images/Officebar/SVG/grid-filter-filtered.svg) !important;
+        }
+    }
+
+    &.headerFilterCol[data-filtered="True"] {
+        background-image: url(/Images/Officebar/SVG/grid-filter-filtered.svg) !important;
+
+        &:hover, &:focus {
+            background-image: url(/Images/Officebar/SVG/grid-filter-filtered.svg) !important;
+        }
+    }
+
+    &:hover, &:focus {
+        height: 24px !important;
+        margin: 0 0 0 3px;
+        background-image: url(/Images/Officebar/SVG/grid-filter-white.svg) !important;
+        background-size: 55%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+ul.FilterMenu {
+    border: none;
+    padding: 0;
+
+    li.FilterItem {
+        height: 34px;
+        line-height: 34px;
+
+        &.FilterItemFirst {
+            /*font-weight: 600;*/
+
+            span.FilterText {
+            }
+        }
+
+        a.FilterLink {
+            span.FilterText {
+                background: none;
+                display: block;
+                margin: 0;
+
+                &:hover {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+/*filter dropdown*/
+
+ul.rmGroup {
+    li.rmItem {
+        &.rmSeparator {
+            display: none;
+        }
+
+        &.rmFirst {
+            span.rmLink {
+            }
+        }
+
+        &.rmLast {
+            a.rmLink {
+                font-weight: normal;
+
+                &:hover {
+                    font-weight: 600;
+                }
+            }
+        }
+
+        .rmLink {
+            &:hover {
+            }
+
+            .rmText {
+                height: 32px;
+                line-height: 32px;
+                padding-left: 10px;
+
+                &.rmExpandRight {
+
+                    &:after {
+                        content: "";
+                        top: 12px;
+                        right: 4px;
+                        z-index: 999;
+                        display: block;
+                        position: absolute;
+                        clear: both;
+                    }
+                }
+            }
+        }
+
+        div.rmSlide {
+
+            .rmScrollWrap {
+                min-width: 200px;
+
+                .rmVertical {
+                    &:before {
+                        border: none;
+                    }
+                }
+            }
+
+            .rmGroup {
+                ul.rmVertical {
+                    li.rmItem {
+                        height: 34px;
+                        line-height: 34px;
+                        font-size: 12px;
+                        min-width: 196px;
+
+                        div.rmText {
+                        }
+
+                        &:hover {
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

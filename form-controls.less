@@ -1,0 +1,777 @@
+﻿#coreMainControlDiv {
+
+    #C1_PageMainDiv {
+        table.xmlFormRowControlTable {
+
+            table.xmlFormSectionTable {
+                table {
+                    tr {
+
+                        td {
+                        }
+
+                        table.tblDtCtrl td {
+                            border: none;
+                        }
+
+                        td.tdTextAlignRgt {
+                            span.text {
+                            }
+                        }
+
+                        td {
+                            input.tbC, textarea, select, input.btnC[controltype="PickerTrigger"] {
+                                /*border: none;*/
+                                &:focus {
+                                    outline: none;
+                                }
+                            }
+
+                            &[controltype="DateTime"] {
+                                input.radPreventDecorate[type="text"] {
+                                    width: 0 !important;
+                                    margin: 0 !important;
+                                    padding: 0 !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*rad calendar input control*/
+.mw-design#coreMainControlDiv .tdTextAlignRgt, .ui-dialog {
+    & + td.tdTextValue, & + td[data-mw-redesign="true"] {
+        .RadPicker, .RadDateTimePicker {
+
+            input.radPreventDecorate[type="text"] {
+                width: 0 !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+
+            .RadInput {
+                input.riTextBox.riEnabled {
+                }
+
+                input.riTextBox {
+                    width: 150px !important;
+                }
+
+                .rcSelect {
+                    a {
+                        outline: none;
+                        border: none;
+                        background: none !important;
+                        font-size: 1em;
+
+                        .t-ripple-container {
+                            display: none;
+                        }
+
+                        &:hover, &:focus {
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/*rad calendar input control*/
+
+.ui-dialog {
+
+    td.tdTextValue {
+        div.ddlMultiSelectControls {
+            > div.k-multiselect-wrap {
+                li.k-button {
+                    & > span:not(.MultiSelectDropdown-selected-value):not(.k-select) {
+                        &[deselectable = "on"] {
+                            line-height: 22px !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    div.ddlMultiSelectControls {
+        > div.k-multiselect-wrap {
+            li.k-button {
+                & > span:not(.MultiSelectDropdown-selected-value):not(.k-select) {
+                    line-height: initial !important;
+                }
+            }
+
+            span.k-icon.k-i-loading{
+                top:-2px;
+            }
+
+            span.k-select {
+                span.k-icon.k-i-close {
+                    margin-top: 3px !important;
+
+                    &:before {
+                        margin-top: 0px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*Multi Select Controls*/
+div.ddlMultiSelectControls {
+    > div.k-multiselect-wrap {
+        min-height: 24px;
+        min-width: 200px;
+        border-radius: 0;
+        overflow: auto !important;
+        box-sizing: border-box;
+
+        ul.k-reset {
+            min-width: 188px;
+            word-break: break-word;
+            white-space: normal;
+            display: inline;
+        }
+
+        &:focus {
+            box-shadow: none;
+            outline: none;
+            border: none;
+            border-radius: 0;
+        }
+
+        li.k-button {
+            margin-top: 0;
+            margin-bottom: 4px;
+            min-height: 22px;
+            height: 22px;
+            padding: 0px 18px 0px 4px;
+            overflow: auto !important;
+            display: inline-table;
+
+            & > span:not(.MultiSelectDropdown-selected-value):not(.k-select) {
+                line-height: 22px !important;
+                max-height: 22px !important;
+                min-height: 22px !important;
+            }
+
+            span.k-select {
+                span.k-icon.k-i-close {
+                    margin-top: 4px !important;
+
+                    &:before {
+                        margin-top: 0px;
+                    }
+                }
+            }
+
+            span {
+                word-break: break-all;
+                text-align: left;
+                max-height: 100% !important;
+
+                &.MultiSelectDropdown-selected-value {
+                    word-break: break-word;
+                    -ms-word-break: normal;
+                    display: inline-block;
+                    line-height: 1.7em;
+                }
+            }
+        }
+    }
+}
+
+    div.k-state-hover {
+        span.k-i-close.k-icon.k-clear-value.k-i-close {
+            opacity: 1;
+        }
+    }
+
+    .k-animation-container {
+
+        .k-filter-menu {
+            border-radius: 0;
+
+            .k-filter-help-text {
+                font-size: 12px;
+                font-weight: 600;
+            }
+
+            .k-dropdown-wrap.k-state-default {
+                border-radius: 0;
+
+                span.k-input {
+                    font-size: 12px;
+                }
+
+                span.k-select {
+                }
+            }
+
+            input.k-textbox {
+            }
+        }
+
+    .k-list-container {
+        padding: 0 !important;
+        top: -1px;
+
+            table.MultiSelectDropdown-header {
+                padding-right: 16px !important;
+                box-sizing: border-box;
+
+                tr {
+                    td {
+                        span {
+                            /*BUG fix for 402528*/
+                            padding: 0 3px;
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+
+            .k-list-scroller {
+                overflow-y: scroll;
+                padding-left: 1px;
+
+                ul.k-list {
+                    li.k-item {
+                        box-shadow: none;
+                        border-radius: 0;
+                        cursor: pointer;
+                        padding: 0;
+                        font-weight: 500;
+                        vertical-align: middle;
+                        min-height: 34px;
+                        line-height: 30px;
+                        box-sizing: border-box;
+
+                        &:hover {
+                        }
+
+                        &.k-state-selected {
+                        }
+
+                        &.k-state-focused {
+                        }
+
+                        & > table {
+                            box-sizing: border-box;
+                            border-collapse: collapse;
+                            border-spacing: 0;
+                            height: 100%;
+                            min-height: 34px;
+
+                            td {
+                                padding: 5px;
+                                border: none;
+                            }
+                        }
+
+                        span {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .k-picker-wrap.k-state-default {
+        border-radius: 0;
+        box-shadow: none;
+
+        &.k-state-hover, &.k-state-selected {
+        }
+
+        &.k-state-focsed {
+            box-shadow: none;
+        }
+    }
+
+    div {
+        button.k-button {
+            margin-top: 5px !important;
+        }
+    }
+
+    .k-calendar-container {
+        .k-calendar {
+            .k-header {
+                a.k-link {
+                    &:hover {
+                        background: none;
+                    }
+                }
+            }
+
+            .k-footer {
+                .k-link.k-nav-today {
+                    font-weight: 600 !important;
+                    text-decoration: none;
+                    text-align: left !important;
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+
+
+            td[role="gridcell"] {
+                border-radius: 0 !important;
+
+                &:hover {
+                    box-shadow: none !important;
+                    border: none !important;
+                }
+
+                &.k-state-selected, &.k-state-focused {
+                    box-shadow: none !important;
+                    border: none !important;
+
+                    a.k-link {
+                        font-weight: normal;
+                    }
+                }
+
+                &.k-other-month.k-weekend {
+                    a.k-link {
+                    }
+
+                    &:hover {
+                        background: none !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .k-widget.k-numerictextbox {
+        .k-numeric-wrap {
+            border-radius: 0;
+            border: 0 !important;
+            height: 26px;
+            line-height: 26px;
+
+            &.k-state-focused {
+                box-shadow: none !important;
+                border: none;
+
+                input {
+                    padding: 2px 5px 1px 5px !important;
+                }
+            }
+
+            &:focus {
+                box-shadow: none;
+                border-radius: 0;
+            }
+
+            .k-select {
+                span.k-link {
+                    box-sizing: border-box;
+                    border-radius: 0 !important;
+
+                    &.k-state-selected {
+                        background: none !important;
+                    }
+                }
+            }
+        }
+    }
+    /*Multi Select Controls*/
+    /*rad calendar input control*/
+    .RadComboBox_Default {
+        .rcbInner {
+            padding: 0 !important;
+            margin-bottom: 10px;
+            width: 200px;
+
+            button.rcbActionButton {
+
+                .t-font-icon {
+                }
+            }
+        }
+    }
+    /*body.claro:before {
+    content: "";
+    width: 100%;
+    position: absolute;
+    margin-top: -13px;
+    height: 01px;
+}*/
+    .gisShadowDiv {
+        content: "";
+        position: relative;
+        margin-top: -13px;
+        height: 01px;
+        width: 100%;
+    }
+
+    #dataTable tr {
+        &.hrRow {
+            &.hrRowSelected {
+                select {
+                    width: 94% !important;
+                    display: block;
+                    margin: 0 auto !important;
+                }
+            }
+
+            td {
+                vertical-align: middle;
+            }
+        }
+
+        tr[isexpanded="false"] {
+            td {
+                vertical-align: middle;
+            }
+        }
+    }
+
+    div.k-nodata {
+        font-weight: 600;
+    }
+
+    .xml-form {
+
+        .DynamicGrid, .ClientDynamicGrid {
+            padding-left: 10px;
+            margin-left: 0 !important;
+
+
+            input[type="submit"] {
+                margin: 0 10px 0 0 !important;
+            }
+        }
+
+        .ClientDynamicGrid {
+            padding-left: 0 !important;
+        }
+
+        table.xml-form-row[data-button-table="true"] {
+            td[data-mw-hashigherwidth="false"] {
+                padding-left: 0 !important;
+
+
+                input[controltype="Button"] {
+                }
+            }
+        }
+    }
+
+    .RadTreeView .rtIn {
+        word-break: break-all;
+    }
+
+span.rddtInner {
+    padding: 1px !important;
+
+    &.rddtExtraPadding {
+        min-height: 24px;
+        font-weight: 500;
+    }
+
+    span.rddtFakeInput.rddtEmptyMessage {
+        padding: 0px;
+        padding-left: 5px;
+        font-weight: 500 !important;
+        min-height: 20px;
+        line-height: 20px;
+        font-style: normal;
+        font-size: 13px;
+    }
+
+    span.rddtFakeInput {
+        padding: 0 0 0 1px;
+        line-height: 1.6em !important;
+        width: 150px;
+    }
+
+    :-ms-lang(x), span.rddtFakeInput {
+        line-height: 1.5em !important;
+    }
+}
+
+    span.rcbInner {
+        box-sizing: border-box;
+
+        &.rcbReadOnly {
+            input {
+                font-weight: 500 !important;
+            }
+        }
+    }
+
+    div.RadDropDownTree {
+        .rddtClearButton, rddtIcon {
+            top: 5px;
+            margin-top: 0px;
+        }
+    }
+
+    input[type="text"][controltype="Numeric"] {
+        padding-right: 4px;
+    }
+    /*form builder specific*/
+    .k-pane {
+        td {
+            input.input-style, select.input-style {
+                min-height: 24px;
+                max-height: 24px;
+                margin-bottom: 10px;
+                min-width: 200px;
+                box-sizing: border-box;
+            }
+
+            input.input-style {
+                padding: 0px;
+                padding-left: 4px;
+                padding-right: 4px;
+            }
+
+            select.input-style {
+                padding: 0px;
+            }
+
+            textarea.input-style {
+                min-height: 24px;
+                margin-bottom: 10px;
+                min-width: 200px;
+                box-sizing: border-box;
+                padding: 0px;
+                padding-left: 5px;
+                padding-top: 5px;
+
+                & ~ span.help-imageOnHover {
+                    position: absolute;
+                    top: 2px;
+                    margin-left: 4px;
+                }
+
+                :-ms-lang(x), & ~ span.help-imageOnHover {
+                    position: absolute;
+                    top: 2px;
+                    margin-left: 2px;
+                }
+            }
+
+            div.ui-wrapper.resizable-textarea {
+                display: inline-block;
+
+                & ~ span.help-imageOnHover {
+                    position: absolute;
+                    top: 2px;
+                    margin-left: 4px;
+                }
+
+                :-ms-lang(x), & ~ span.help-imageOnHover {
+                    position: absolute;
+                    top: 2px;
+                    margin-left: 2px;
+                }
+            }
+
+            &.alnright {
+                padding-right: 20px;
+            }
+
+            span.help-imageOnHover {
+                position: relative;
+                top: 0px;
+            }
+        }
+
+        #pnlDetails {
+            padding-top: 10px;
+            padding-left: 20px;
+        }
+    }
+
+    div#rightTabStrip {
+        .k-content {
+
+            div.attribute-line {
+                padding: 0px;
+                text-align: right;
+                padding-right: 10px;
+            }
+
+            input.attrfield, input.input-style, select.attrfield {
+                box-sizing: border-box;
+                padding: 0px;
+                padding-left: 4px;
+                min-height: 24px;
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+
+            input.attrfield, input.input-style {
+                min-width: 140px !important;
+                padding-right: 30px;
+            }
+
+            select.attrfield {
+                min-width: 140px !important
+            }
+
+            button.input-style {
+                min-height: 24px;
+                min-width: 30px;
+                box-sizing: border-box;
+                padding: 0px;
+                margin-left: -33px;
+
+                i {
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+
+    span.attribute-label {
+        text-align: right;
+        line-height: 1.2em;
+        width: 40%;
+        position: relative;
+        margin-right: 0px;
+        padding-right: 10px;
+
+        &:after {
+            content: ':';
+            top: 0px;
+            height: 20px;
+            width: 2px;
+            position: absolute;
+            padding-left: 4px;
+        }
+    }
+
+    div.k-window-content.k-content {
+        .k-content {
+
+            div.attribute-line {
+                padding: 0px;
+                padding-right: 10px;
+            }
+
+            input.attrfield, input.input-style, select.attrfield, select.input-style {
+                box-sizing: border-box;
+                padding: 0px;
+                padding-left: 4px;
+                min-height: 24px;
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+
+            input.attrfield.attribute_input {
+                width: 40% !important;
+            }
+
+            input.attrfield, input.input-style {
+                min-width: 140px !important;
+                padding-right: 30px;
+            }
+
+            select.attrfield {
+                min-width: 140px !important
+            }
+
+            button.input-style {
+                min-height: 24px;
+                min-width: 30px;
+                box-sizing: border-box;
+                padding: 0px;
+                margin-left: -33px;
+
+                i {
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+
+    .RadComboBoxDropDown {
+        .rcbHeader {
+            ul li {
+                width: 85px !important;
+            }
+        }
+
+        .rcbScroll.rcbWidth {
+            ul.rcbList {
+                ul li {
+                    width: 85px !important;
+                }
+            }
+        }
+    }
+    /*Multi Select Controls*/
+    /*dropdown tree*/
+    .RadDropDownTree.RadDropDownTree_Default {
+        .rddtInner {
+            min-height: 20px;
+        }
+    }
+
+    .ui-dialog {
+        table[role="grid"] {
+            tr[role="row"].k-grid-edit-row {
+                td[role="gridcell"] {
+                    input[type="text"] {
+                        width: 200px;
+                        height: 24px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                }
+            }
+        }
+    }
+    /*Multi-picker*/
+select[multiple="multiple"]:not([controltype="Listbox"]) {
+    max-height: 74px;
+}
+
+    div#centerContent[page-render-mode="view"],
+    div#centerContent[page-render-mode="2"] { // 2 => View mode for ASPX, 1 is for Edit, 0 is for New
+        div#coreMainControlDiv {
+            textarea.tbC {
+                padding: 3px !important;
+                overflow-y: hidden;
+            }
+
+        .project-details-content {
+            .ui-wrapper {
+                input[type="text"], textarea {
+                    padding-left: 5px !important;
+                    overflow-y: hidden !important;
+                }
+            }
+        }
+    }
+}
+
+.ClientDynamicGrid .k-grid-content > .k-grid-norecords > .k-grid-norecords-template {
+    left: 7%;
+    margin-left: -8em;
+}
+
+.toggler-container {
+    span {
+        position: absolute;
+        top: 4px;
+    }
+}

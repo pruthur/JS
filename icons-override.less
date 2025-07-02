@@ -1,0 +1,445 @@
+﻿/*overrides material theme filter icon*/
+.common-icon-override {
+    font-family: 'mw-icons' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    &:before {
+        font: inherit !important;
+    }
+}
+
+.t-font-icon.rgIcon.rgFilterIcon {
+    .common-icon-override;
+
+    &:before {
+        content: "\e9d6" !important;
+    }
+
+    &.rgFilterActive {
+        color: #fff;
+    }
+}
+
+.ui-icon.ui-icon-alert {
+    background-image: url(../../Images/Officebar/SVG/continue-session.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 24px;
+    width: 24px;
+    padding-top: 10px;
+}
+
+.k-icon.k-i-filter,
+.ui-dialog span.k-icon.k-i-filter {
+    .common-icon-override;
+    font-size: 1em;
+
+    &:before {
+        content: "\e9d6" !important;
+    }
+}
+
+.rcCalPopup.t-ripple-effect, .rcCalPopup {
+    .common-icon-override;
+    font-size: 16px;
+    text-indent: 0 !important;
+
+    &:before {
+        font-family: 'mw-icons' !important;
+        content: "\ea27" !important;
+        text-decoration: none;
+        display: inline-block;
+    }
+}
+
+.rcTimePopup.t-ripple-effect, .rcTimePopup {
+    .common-icon-override;
+    font-size: 1.2em;
+    z-index: 0;
+
+    &:before {
+        font-family: 'mw-icons' !important;
+        content: "\ea28" !important;
+        padding-top: 2px;
+        text-decoration: none;
+        display: inline-block;
+    }
+}
+
+table.rcTable.rcSingle {
+    a.rcCalPopup, .rcTimePopup {
+        color: transparent;
+        z-index: 0;
+        text-indent: 0 !important;
+        font-size: 16px;
+        background-image: none !important;
+        padding-top: 0px;
+
+        &:before {
+            margin: auto;
+            display: block;
+        }
+    }
+
+    tr {
+        > td {
+            border-width: 0px !important;
+        }
+
+        td.rcInputCell {
+            padding: 0px !important;
+
+            + td {
+                a.rcCalPopup {
+                    padding-top: 4px;
+
+                    &:before {
+                        margin-left: 7px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#coreMainControlDiv .RadPicker_Default .rcCalPopup,
+.ui-dialog .RadPicker_Default .rcCalPopup {
+    background-image: none !important;
+}
+
+span.rgExpandIcon.rgIcon {
+    .common-icon-override;
+    font-size: 13px;
+
+    &:before {
+        content: "\e9c0";
+    }
+}
+
+span.rgCollapseIcon.rgIcon {
+    .common-icon-override;
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    font-size: 13px;
+
+    &:before {
+        content: "\e981";
+    }
+}
+
+
+span.rgSortAscIcon, span.rgSortDescIcon {
+    font-family: "Material Icons" !important;
+
+    &:before {
+        font-family: "Material Icons" !important;
+    }
+}
+
+.rgHCMGroupIcon {
+    .common-icon-override;
+    font-size: 13px;
+
+    &:before {
+        content: "\e9d7" !important;
+        text-indent: unset !important;
+        font-size: 16px !important;
+    }
+}
+
+.rgHCMUngroupIcon {
+    .common-icon-override;
+    font-size: 13px;
+
+    &:before {
+        content: "\ea7e" !important;
+        text-indent: unset !important;
+        font-size: 16px !important;
+    }
+}
+
+.mw-design#coreMainControlDiv div.auditlog-container .tdTextAlignRgt + td.tdTextValue .RadPicker a.rcCalPopup {
+    .common-icon-override;
+    font-size: 16px;
+    text-indent: 0 !important;
+
+    &:before {
+        content: "\ea27" !important;
+        color: #50565b;
+    }
+}
+
+div#historypage, .ui-dialog {
+    .title-toggler {
+        span.mw-button {
+            &:before {
+                display: none;
+            }
+        }
+    }
+}
+
+.RadTreeView {
+    .rtIn {
+        border-radius: 0 !important;
+    }
+
+    span.rtPlus {
+        background-image: url(/Images/mwredesign/expand.svg);
+        height: 9px;
+        width: 9px;
+        background-position: center;
+        position: absolute;
+        top: 13px;
+        left: 6px;
+
+        &:before {
+            content: ' ' !important;
+            border: none !important;
+        }
+    }
+
+
+    span.rtMinus {
+        background-image: url(/Images/mwredesign/collapse.svg);
+        height: 9px;
+        width: 9px;
+        background-position: center;
+        position: absolute;
+        top: 13px;
+        left: 6px;
+
+        &:before {
+            content: ' ' !important;
+            border: none !important;
+        }
+    }
+
+
+    span.rtPlus, span.rtMinus {
+
+        & + label {
+            margin-left: 2px !important;
+        }
+
+        & + span.rtChecked, & + span.rtUnchecked, & + span.rtIndeterminate {
+            margin-left: 5px !important;
+        }
+    }
+}
+
+/*xml form*/
+.rddtSlide[is-xml-form-control="true"] {
+    .rddtPopup {
+
+        .rddtScroll {
+            .RadTreeView {
+                span.rtMinus, span.rtPlus {
+                    position: relative;
+                    top: 1px;
+                    left: 1px;
+                }
+
+                span.rtChecked, span.rtUnchecked, span.rtIndeterminate {
+                    position: relative !important;
+                    top: -1px;
+
+                    & + .rtIn {
+                        padding-top: 1px !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*Attachment - Link document*/
+div.RadTreeView[id$="_rddtFolder_EmbeddedTree"] {
+    span.rtMinus, span.rtPlus {
+        position: relative;
+        top: 1px;
+        left: 1px;
+    }
+}
+
+
+/*Auditlog dropdown*/
+.rddtCheckAll + div.RadTreeView[id$="_fieldRadDropDownTree_EmbeddedTree"] {
+    .rtPlus, .rtMinus {
+        z-index: 999;
+        top: 14px;
+    }
+
+    span.rtChecked, span.rtUnchecked, span.rtIndeterminate {
+        position: relative !important;
+        top: 0px;
+    }
+}
+
+/*User accounts - Business Unit*/
+div.RadTreeView[id$="radddlBusinessUnitTree_EmbeddedTree"] {
+    .rtPlus, .rtMinus {
+        position: relative;
+        top: 1px;
+        left: 1px;
+    }
+}
+
+/* permissions page */
+div.RadTreeView[id$="RadDropDownTree1_EmbeddedTree"] {
+    :-ms-lang(x), .rtPlus, span.rtMinus {
+        top: 12px;
+    }
+}
+/*documents - move*/
+.ui-dialog .RadTreeView[id$="rtvFolder"] {
+
+    span.rtMinus, span.rtPlus {
+        position: relative;
+        top: 1px;
+        left: 1px;
+    }
+
+    .rtIn {
+        border: none !important;
+
+        &[disabled="disabled"] {
+            background-color: transparent !important;
+        }
+    }
+
+    .rtHover .rtIn, .rtSelected .rtIn {
+        background: #a3bece !important;
+        color:#333;
+    }
+}
+
+
+.rocExpandArrow {
+    .common-icon-override;
+    border: 0 !important;
+    background: #fff !important;
+    outline: none !important;
+
+    &:before {
+        content: "\e9bf" !important;
+        text-indent: unset !important;
+    }
+}
+
+.rocCollapseArrow {
+    .common-icon-override;
+    border: 0 !important;
+    background: #fff !important;
+    outline: none !important;
+
+    &:before {
+        content: "\e980" !important;
+        text-indent: unset !important;
+    }
+}
+
+.dropdownIcon.RadDropDownTree_Default .rddtIcon {
+    background: none !important;
+}
+
+.dropdownIcon.RadDropDownTree_Default .rddtIcon:after {
+    content: ' ';
+    position: absolute;
+    right: 3px;
+    top: 7px;
+    height: 9px;
+    width: 10px;
+    background-repeat: no-repeat;
+    background-image: url(/Images/mwredesign/bolddropdown.svg) !important;
+}
+
+table.tblDtCtrl > tbody > tr > td:nth-child(2):after {
+    content: '';
+    display: block;
+    height: 9px;
+    width: 10px;
+    background-repeat: no-repeat;
+    background-image: url(/Images/mwredesign/boldDisabledDropdown.svg) !important;
+    position: absolute;
+    top: 8px;
+    right: -2px;
+    border: none !important;
+}
+
+.RadDropDownTree .rddtIcon:before {
+    content: " " !important;
+    height: 12px !important;
+    width: 12px !important;
+    background-repeat: no-repeat;
+    background-image: url(/Images/mwredesign/bolddropdown.svg) !important;
+}
+
+div#permissionsMasterContainer .k-i-arrow-60-down:before {
+    content: " " !important;
+    height: 12px !important;
+    width: 12px !important;
+    background-repeat: no-repeat;
+    background-image: url(/Images/mwredesign/bolddropdown.svg) !important;
+}
+
+span.dynatree-exp-e span.dynatree-expander,
+.dynatree-exp-el span.dynatree-expander,
+.dynatree-exp-edl span.dynatree-expander {
+    background-image: url(/Images/mwredesign/collapse.svg) !important;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 8px;
+    width: 8px;
+    background-position: 0 !important;
+    position: relative;
+    top: 6px;
+}
+
+span.dynatree-exp-c span.dynatree-expander,
+.dynatree-exp-cl span.dynatree-expander {
+    background-image: url(/Images/mwredesign/expand.svg) !important;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 8px;
+    width: 8px;
+    background-position: 0 !important;
+    position: relative;
+    top: 5px;
+}
+
+.dynatree-ico-ef span.dynatree-icon {
+    background-image: url(/Images/mwredesign/left-tree-folder-open.svg) !important;
+    background-position: 0 !important;
+    position: relative;
+    top: 2px;
+}
+
+.dynatree-ico-cf span.dynatree-icon {
+    background-image: url(/Images/mwredesign/left-tree-folder-closed.svg) !important;
+    background-position: 0 !important;
+    position: relative;
+    top: 2px;
+}
+
+ul.dynatree-container li {
+    background-image: none !important;
+}
+
+.dynatree-container .dynatree-node {
+    .dynatree-connector + .dynatree-icon {
+        position: relative;
+        top: 3px;
+    }
+}

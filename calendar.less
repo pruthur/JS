@@ -1,0 +1,654 @@
+﻿.RadInput.RadInput_Material {
+    .rcSelect {
+        margin-right: 6px;
+
+        a {
+            .rcCalPopup {
+                padding: 0 3px;
+                background: none !important;
+            }
+
+            .rcTimePopup {
+                padding: 0 3px;
+                margin-right: 2px;
+            }
+        }
+    }
+}
+
+/*Rad calendar*/
+
+.RadCalendarPopup {
+    .RadCalendar {
+        padding: 2px;
+        .rcFastPrev, .rcPrev, .rcNext, .rcFastNext {
+            &.t-button {
+                padding: 2px 4px 0px 4px;
+            }
+        }
+
+        &.RadCalendar_Default {
+            td.rcTitlebar {
+                padding: 0 5px 0px 0px !important;
+            }
+
+            a {
+                left: 7px;
+                margin: 0 !important;
+            }
+        }
+
+        .rcTitlebar {
+            & > table {
+                margin: 4px 0px;
+            }
+            border: none;
+            padding: 0px !important;
+            font-size: 10px;
+            overflow: hidden !important;
+            text-indent: 0;
+
+            td.rcTitlebar {
+                font-weight: 700;
+            }
+
+            td {
+                .t-button {
+                    margin: 3px;
+                    top: 2px;
+                }
+
+                a.rcFastPrev {
+                    background-position: 0 -200px !important;
+                }
+
+                a.rcPrev {
+                    background-position: 0 -300px !important;
+                }
+
+                a.rcNext {
+                    background-position: 0 -400px !important;
+                }
+
+                a.rcFastNext {
+                    background-position: 0 -500px !important;
+                }
+
+                a {
+                    font-size: 6px;
+                    margin-top: 3px;
+                    padding: 1px 2px;
+
+                    &:hover {
+                        overflow: hidden !important;
+                    }
+                }
+            }
+        }
+
+
+        .rcTitle {
+            padding-top: 2px;
+            font-weight: 700;
+        }
+
+        span.rcTitle {
+            width: auto !important;
+            display: inline-block;
+            padding: 5px 10px;
+            margin-top: 2px;
+            font-weight: bold;
+        }
+
+        .rcMain {
+            .rcMainTable {
+
+
+                tr.rcWeek {
+                    th {
+                        padding: 2px;
+                        text-align: center;
+                    }
+                }
+
+                tr.rcRow {
+                    th {
+                        padding: 0px 2px;
+                    }
+
+                    td {
+                        background: none !important;
+                        text-align: center;
+
+                        a, span {
+                            padding: 2px;
+                            border-radius: 0;
+                            font-weight: normal;
+
+                            &:hover {
+                            }
+                        }
+                    }
+
+                    td.rcOtherMonth {
+                        a {
+                            font-weight: normal;
+
+                            &:hover {
+                                background: none;
+                            }
+                        }
+
+                        &:hover {
+                            border: none !important;
+                        }
+                    }
+
+                    td.rcSelected {
+                        a {
+                            outline: none;
+                            box-shadow: none;
+                            border: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.RadCalendarPopupShadows {
+    padding: 0px !important;
+
+    table.RadCalendarMonthView {
+        td {
+            &.rcSelected {
+                a {
+                }
+            }
+
+            a {
+                padding: 1px 0px;
+                min-width: 58px;
+                font-size: 14px;
+
+                &:hover {
+                }
+            }
+
+            &.rcButtons {
+                input[type="button"][id^="rcMView"],
+                a[id$="rcMView"] {
+                }
+
+                input[type="button"] {
+                    padding-left: 5px;
+                    padding-right: 5px;
+                }
+            }
+        }
+    }
+}
+
+
+/*rad clalendar bid letting*/
+.RadCalendarPopup {
+    .RadCalendar.RadCalendar_Office2007 {
+        width: 212px;
+        padding: 1px 0px;
+
+        .rcTitlebar {
+
+            a {
+                font-size: 12px;
+                /*background: none;*/
+                border: none;
+                outline: none;
+                box-shadow: none;
+                padding: 4px;
+                box-sizing: border-box;
+            }
+        }
+
+        .rcMain {
+            table.rcMainTable {
+                tr.rcWeek {
+                }
+
+                tr.rcRow {
+                    th#ctl00_C1_radbidOpnTime_calendar_Top_rs_1 {
+                    }
+
+                    td, td.rcSelected {
+                        a {
+                            &:hover {
+                                border: none !important;
+                                box-shadow: none;
+                            }
+                        }
+                    }
+
+                    td.rcOtherMonth {
+                        font-weight: normal;
+                    }
+
+                    td.rcWeekend {
+                    }
+                }
+            }
+        }
+
+
+        tr.rcWeek {
+        }
+    }
+}
+
+
+/*rad clalendar bid letting*/
+
+/*Rad calendar*/
+
+
+/*gantt calendar*/
+
+div#ui-datepicker-div {
+    width: auto;
+    font-size: 13px;
+    border-radius: 0;
+    width: 202px !important;
+
+    .ui-datepicker-header {
+        background: none;
+        border: none;
+        border-radius: 0;
+        text-align: center;
+        padding: 0;
+
+        a {
+            span {
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            &.ui-corner-all {
+                background-color: transparent;
+                border-color: transparent;
+                position: absolute;
+
+                &.ui-datepicker-prev {
+                    left: 5px;
+                    top: 5px;
+
+                    span.ui-icon {
+                        background-image: url('/Images/ImgPrevMD.gif') !important;
+                        background-size: 10px;
+                        background-position: center;
+
+                        &:hover {
+                            background-color: transparent !important;
+                        }
+                    }
+                }
+
+                &.ui-datepicker-next {
+                    right: 5px;
+                    top: 5px;
+
+                    span.ui-icon {
+                        background-image: url('/Images/ImgNextMD.gif') !important;
+                        background-size: 10px;
+                        background-position: center;
+                    }
+                }
+
+                &.ui-state-hover {
+                    background: none !important;
+                }
+
+                span {
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        .ui-datepicker-title {
+            height: 30px;
+            line-height: 30px;
+
+            .ui-datepicker-month, .ui-datepicker-year {
+                padding: 2px;
+                margin-right: 2px;
+                -webkit-appearance: none;
+                outline: none;
+                border: none;
+            }
+
+            &:focus {
+                outline: none !important;
+            }
+        }
+    }
+
+    .ui-datepicker-calendar {
+        font-size: 11px;
+        width: 202px;
+
+        thead {
+            th {
+                text-align: center;
+            }
+        }
+
+        tbody {
+            tr {
+                td {
+
+                    a.ui-state-default {
+                        background: none;
+                        border: none;
+                        outline: none;
+                        text-align: center;
+                        font-size: 12px;
+                        font-weight: normal;
+                        padding: 3px !important;
+                        display: block;
+                        text-decoration: none;
+
+                        &:hover {
+                        }
+                    }
+
+                    a.ui-state-active {
+                    }
+                }
+            }
+        }
+    }
+}
+/*gantt calendar*/
+
+/* Dashboard calendar */
+div[id$="_DashboardDesignPanel"] {
+
+    table.webZonePartChromeStyle {
+    }
+    /*dashboard hover on TILE displaying counters/statuses */
+    div[id$="_oReportDiv"] table tbody tr td a:hover {
+        background: rgba(255, 255, 255, .2) !important;
+    }
+
+
+    table {
+        border: none !important;
+
+        tbody {
+            tr {
+                th {
+                    padding: 3px;
+                }
+
+                td.webZonePartTitleStyle {
+                    table {
+
+                        tbody {
+                            tr {
+                            }
+                        }
+
+                        td {
+                            text-align: left !important;
+
+                            span {
+                                color: #fff;
+                            }
+
+                            a {
+                                img {
+                                    margin: 3px 0 6px 0;
+                                    height: 12px;
+                                    width: auto;
+                                    padding: 2px 5px 0;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                td {
+                    border: none;
+
+                    span {
+                    }
+
+                    a {
+                        text-decoration: none !important;
+                        display: block;
+                        padding: 3px;
+
+                        &.webZoneTitlebarVerbStyle {
+                            display: inline-block;
+                            height: 24px;
+                            width: 30px;
+                            text-align: center;
+                            margin-right: 2px;
+                            padding: 2px 0;
+                        }
+
+                        &:hover, &:active, &:focus {
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Dashboard calendar */
+/*form calendar*/
+div.ddlDtC {
+    width: 200px !important;
+    height: auto;
+
+    table {
+        width: 100%;
+
+        tbody {
+            tr {
+
+
+                td {
+                    padding: 2px 2px;
+                    /*background: @white !important;*/
+                    &:hover {
+                        outline: none !important;
+                        border: none !important;
+                    }
+
+                    td.DP_CAL_ID_12 {
+                    }
+
+                    select {
+                        /*background: @selectOptionBackgroundColor !important;*/
+                        outline: none !important;
+                    }
+                }
+
+                td#DP_CAL_ID_1_508,
+                td#DP_CAL_ID_2_508,
+                td#DP_CAL_ID_3_508,
+                td#DP_CAL_ID_4_508,
+                td#DP_CAL_ID_5_508,
+                td#DP_CAL_ID_6_508,
+                td#DP_CAL_ID_7_508,
+                td#C1_wdcDatePub_DrpPnl1_DP_CAL_ID_1_508,
+                td#C1_wdcDateIssue_DrpPnl2_DP_CAL_ID_2_508,
+                td#C1_wdcDateMeeting_DrpPnl3_DP_CAL_ID_3_508,
+                td#C1_wdcStartDate_DrpPnl1_DP_CAL_ID_1_508,
+                td#C1_wdcEndDate_DrpPnl2_DP_CAL_ID_2_508,
+                td.DP_CAL_ID_22,
+                td.DP_CAL_ID_32,
+                td.DP_CAL_ID_42,
+                td.DP_CAL_ID_52,
+                td.DP_CAL_ID_62,
+                td.DP_CAL_ID_72,
+                td.C1_wdcDatePub_DrpPnl1_DP_CAL_ID_12,
+                td.C1_wdcDateIssue_DrpPnl2_DP_CAL_ID_22,
+                td.C1_wdcDateMeeting_DrpPnl3_DP_CAL_ID_32,
+                td.C1_dtDueDate_DrpPnl2_DP_CAL_ID_22,
+                td#C1_dtDueDate_DrpPnl2_DP_CAL_ID_2_508,
+                td.C1_ERP_CC_BODY_wdcStartDate_DrpPnl1_DP_CAL_ID_12,
+                td#C1_ERP_CC_BODY_wdcStartDate_DrpPnl1_DP_CAL_ID_1_508,
+                td#C1_ERP_CC_BODY_wdcEndDate_DrpPnl2_DP_CAL_ID_2_508,
+                td.C1_ERP_CC_BODY_wdcEndDate_DrpPnl2_DP_CAL_ID_22,
+                td.C1_wdcStartDate_DrpPnl1_DP_CAL_ID_12,
+                td.C1_wdcEndDate_DrpPnl2_DP_CAL_ID_22 {
+                }
+
+                td.DP_CAL_ID_14,
+                td.DP_CAL_ID_74,
+                td.DP_CAL_ID_44,
+                td.DP_CAL_ID_24,
+                td.DP_CAL_ID_34,
+                td.DP_CAL_ID_54,
+                td.DP_CAL_ID_64,
+                td.C1_wdcDatePub_DrpPnl1_DP_CAL_ID_14,
+                td.C1_wdcDateIssue_DrpPnl2_DP_CAL_ID_24,
+                td.C1_wdcDateMeeting_DrpPnl3_DP_CAL_ID_34,
+                td.C1_dtDueDate_DrpPnl2_DP_CAL_ID_24,
+                td.C1_ERP_CC_BODY_wdcStartDate_DrpPnl1_DP_CAL_ID_14,
+                td.C1_ERP_CC_BODY_wdcEndDate_DrpPnl2_DP_CAL_ID_24,
+                td.C1_wdcStartDate_DrpPnl1_DP_CAL_ID_14,
+                td.C1_wdcEndDate_DrpPnl2_DP_CAL_ID_24 {
+                }
+            }
+
+            tr:first-child {
+                font-weight: bold;
+                width: 100%;
+                vertical-align: top;
+
+                td {
+
+                    &:hover {
+                        background: none !important;
+                    }
+                }
+            }
+
+            tr {
+                td[nowrap="nowrap"][id$="_508"],
+                td[nowrap="nowrap"][id$="DP_CAL_ID_1_508"] {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+/*form calendar*/
+
+
+
+/*Time picker*/
+.RadCalendarTimeView, .RadCalendarTimeView.RadCalendarTimeView_Office2007 {
+    tr {
+        th {
+            padding: 0 5px;
+            font-size: 1em;
+        }
+
+        td {
+            a {
+                text-align: auto;
+                border: none !important;
+                padding: 0;
+
+                &:hover {
+                    border: none;
+                    outline: none;
+                    box-shadow: none;
+                    border-radius: 0;
+                }
+            }
+        }
+
+        td.rcSelected {
+            a {
+                border: none;
+                outline: none;
+                box-shadow: none;
+                border-radius: 0;
+            }
+        }
+
+        td.rcHover {
+            outline: none !important;
+            border: none !important;
+
+            a {
+                padding: 0 !important;
+                border: none;
+            }
+
+            &:hover {
+                outline: none !important;
+                border: none !important;
+            }
+        }
+    }
+}
+
+/*Time picker*/
+/*Izenda Calender*/
+
+div.iz-ui-datepicker {
+    a.iz-ui-datepicker-next {
+        top: 10px;
+        right: 10px;
+
+        span {
+            transform: rotate(-135deg);
+        }
+    }
+
+    a.iz-ui-datepicker-prev {
+        top: 10px;
+        left: 10px;
+
+        span {
+            transform: rotate(45deg);
+        }
+    }
+}
+
+.RadCalendarTimeView {
+    tbody {
+        tr {
+
+            &:nth-child(2n+1) {
+            }
+
+            td {
+                padding: 0 !important;
+                vertical-align: middle;
+
+                &.rcSelected {
+                }
+
+                a {
+                    text-align: center;
+                    font-size: 0.85em;
+                    padding: 0 3px !important;
+                    display: block;
+                    height: 24px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+}

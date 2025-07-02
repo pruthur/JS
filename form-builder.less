@@ -1,0 +1,685 @@
+﻿/*form builder popup*/
+
+div.k-window[data-role="draggable"] {
+    /*padding: 39px 5px 5px 5px !important;*/
+    padding: 1px;
+    padding-top: 30px !important;
+
+    &.expressions-container {
+        /*padding: 40px 10px 10px 10px !important;*/
+    }
+
+    .k-window-titlebar {
+        margin-top: -28px !important;
+
+        span.k-window-title {
+            font-weight: 600;
+        }
+
+        div.k-window-actions {
+            top: 3px;
+            right: 10px;
+
+            a.k-button-icon.k-bare {
+                width: 30px;
+                height: 26px !important;
+                opacity: 1;
+
+                span.k-icon {
+                    font-size: 1.3em;
+                    font-weight: 600 !important;
+                }
+            }
+        }
+    }
+
+    div#ae {
+        div[id$="pnlBorder"] {
+            table {
+                tbody {
+
+                    tr {
+                        td {
+                            input {
+                                &[type="checkbox"] + label[for="chkStyle"] {
+                                    margin-right: 50px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+ul#tabs {
+    .aSelected {
+        padding: 8px 15px 8px 6px !important;
+        font-weight: 600 !important;
+    }
+
+    .liUnSelected {
+        padding-top: 5px !important;
+    }
+}
+
+form[action*="./XmlFormBuilder.aspx"] {
+    & ~ div.k-window[data-role="draggable"] .k-window-titlebar div.k-window-actions {
+        top: 6px;
+    }
+}
+
+ul.k-tabstrip-items {
+    li.k-state-default {
+        span.k-link {
+        }
+    }
+
+    li.k-tab-on-top {
+        span.k-link {
+            font-weight: 600;
+        }
+    }
+}
+
+
+div#middlePane {
+    overflow: hidden;
+
+    div.input-group {
+        margin-top: 5px !important;
+
+        input.form-control[placeholder="Search"] {
+        }
+    }
+}
+
+#leftPane.k-pane {
+    ul[data-role="panelbar"] {
+        li.k-item {
+            span.k-link.k-header {
+                text-transform: uppercase;
+                font-weight: 700;
+                font-size: 0.85em;
+                padding-top: 3px;
+                padding-bottom: 3px;
+            }
+        }
+    }
+}
+
+ul.k-panel {
+    li.k-item {
+        font-weight: 600;
+        font-size: 0.9em;
+
+        span.k-sprite {
+            padding-right: 3px;
+        }
+
+        span.mw-icon {
+            padding-right: 3px;
+            margin-right: 12px;
+            vertical-align: middle;
+            font-size: 15px;
+        }
+
+        span.mw-button {
+            padding-left: 0px;
+        }
+    }
+}
+
+div#hierarchy-scroll {
+    div#formHierarchy[data-role="treeview"] {
+        ul.k-treeview-lines[role="tree"] {
+            li[role="treeitem"] {
+                div {
+                    span.k-in {
+                        font-weight: 600;
+                        padding: 3px;
+
+                        &.k-state-hover, &.k-state-selected {
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.k-multiselect {
+    ul[role="listbox"] {
+        .k-button {
+            min-height: 20px !important;
+
+            span {
+                margin: 0px !important;
+            }
+        }
+    }
+
+    span.k-i-close.k-icon.k-clear-value {
+        top: 0px !important;
+        font-size: 13px;
+        opacity:0;
+
+        &.k-i-close {
+            top: 3px !important;
+        }
+
+        &:before {
+            margin-top: 2px;
+        }
+    }
+
+    input.k-input {
+        top: 0px !important;
+        padding: 0 0 0 5px;
+        height: 22px;
+        text-indent: 0;
+    }
+}
+
+.mw-design#coreMainControlDiv table.xmlFormRowControlTable .xmlFormRowControlTable {
+    &.ui-droppable {
+        table.tblDtCtrl[controltype="Date"] {
+            & > tbody > tr > td {
+                &:nth-child(1) {
+                    .ui-wrapper {
+                        border: 1px solid #bfc4cc !important;
+
+                        input {
+                            border: 0 !important;
+                        }
+                    }
+                }
+
+                &:nth-child(2):after {
+                    right: 5px;
+                    top: 8px;
+                }
+            }
+        }
+    }
+
+    &.formDesignerContainerHighlight.ui-droppable table .tblDtCtrl[controltype=Date] > tbody > tr > td:nth-child(2):after {
+        right: 20px;
+    }
+
+    div[controltype="MultiPicker"] {
+        table.xmlFormInnerRowControlTable {
+
+            .btnC {
+                box-sizing: border-box;
+
+                & + .btnC {
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+
+    input[controltype="Formula"] {
+        padding-left: 5px;
+        box-sizing: border-box;
+    }
+}
+
+.RadDateTimePicker {
+    .rcSelect {
+        a {
+            text-indent: 0 !important;
+            padding: 0 0;
+            margin: 0 1px;
+            z-index: 0;
+
+            .t-ripple-container {
+                display: none !important;
+            }
+        }
+    }
+}
+
+.ui-dialog .RadDateTimePicker {
+    .rcSelect {
+        a {
+            margin-left: -3px;
+        }
+    }
+}
+
+.RadPicker.RadTimePicker {
+    .rcSelect {
+        a {
+            margin-right: -4px;
+        }
+    }
+}
+
+div#attribute-scroll {
+    ul[data-role="panelbar"] {
+        li.k-item {
+            span.k-link {
+                font-weight: 700;
+                font-size: 11px;
+            }
+        }
+    }
+}
+
+table.mw-design[data-attachmentcontrol-table="true"] {
+    div[data-attachments-container="true"] {
+        table tr td[valign="bottom"] {
+            div.k-content {
+                input.tbC[type="file"][aria-label="Upload Document"] {
+                    margin-top: 10px !important;
+                }
+            }
+        }
+
+        table.AttachmentControl {
+            td.pageSubHeaders[data-dynamic-grid-attachment-caption="true"] {
+                strong {
+                    padding-top: 0px;
+                    width: 200px;
+                    line-height: 19px;
+                }
+            }
+        }
+    }
+}
+
+.rddtPopup.rddtPopup_Default.attachment-dropdown {
+    width: inherit !important; /*made 250 to 200 as fix of 405665*/
+}
+
+div.CheckListGroup {
+    table tr td {
+        input[type="text"].tbC {
+            margin: 3px 0 3px 3px;
+        }
+    }
+}
+
+div.k-widget.k-window {
+    div#attribute_editor {
+        div[id$="pnlBackground"] {
+            table {
+                text-align: left !important;
+            }
+        }
+    }
+}
+
+div.jqi .jqibuttons {
+    text-align: center !important;
+}
+
+#controlHolder {
+
+    div.officebar ul[role="tablist"] li[role="presentation"] {
+        a {
+        }
+
+        &.current a {
+        }
+    }
+
+    &[data-formbuilder="true"] {
+        &[data-render-mode="view"] {
+
+            table.tblDtCtrl > tbody > tr > td {
+
+                &:nth-child(2):after {
+                    right: 26px !important;
+                }
+            }
+        }
+
+        table.tblDtCtrl > tbody > tr > td {
+            &:nth-child(1) {
+                & > .ui-wrapper {
+                    min-width: 84px !important;
+                }
+            }
+
+            &:nth-child(2):after {
+                right: 26px !important;
+                top: 10px !important;
+            }
+
+            &:nth-child(2) img {
+                &:hover {
+                    cursor: pointer;
+                }
+
+                top: 3px !important;
+            }
+        }
+
+        tr[data-textarea-container="true"] {
+            td[data-mw-redesign="true"] {
+                .ui-wrapper {
+                    padding-bottom: 0 !important;
+
+                    textarea[controltype="TextArea"] {
+                        height: 100% !important;
+                        width: 100% !important;
+                    }
+                }
+            }
+        }
+
+        .RadInput {
+            a {
+                height: 24px;
+            }
+
+            .riTextBox {
+                min-height: 24px;
+            }
+        }
+
+        td.pageSubHeaders {
+            padding-right: 15px !important;
+        }
+    }
+}
+
+
+div#pnlDesign {
+
+    div#controlHolder[data-render-mode="edit"] {
+        table.xmlFormRowControlTable.ui-draggable[data-datetime-table="true"] {
+            div.RadDateTimePicker {
+                margin-top: -10px;
+            }
+        }
+    }
+
+    table.xmlFormRowControlTable.ui-draggable[data-datetime-table="true"] {
+        div.RadDateTimePicker {
+            .rcSelect {
+                a.rcCalPopup {
+                    padding-left: 5px;
+                }
+            }
+        }
+    }
+
+    div.xmlFormRowControlStaticGrid {
+        table[render-as-form="false"] {
+            td.static-grid-cell {
+
+                div[controltype="RichTextBox"] {
+                    min-width: 400px !important;
+
+                    div.ui-wrapper {
+                        div.ui-resizable-handle.ui-icon-gripsmall-diagonal-se {
+                            bottom: 1px !important;
+                        }
+                    }
+                }
+
+                &[data-control-type="Listbox"] {
+                    select.ddlControls {
+                        height: 50px !important;
+                        width: calc(100% - 2px) !important;
+                    }
+                }
+
+                input[controltype="Hidden"], select.ddlControls, input[disabled="disabled"] {
+                    width: 100% !important;
+                }
+
+                &[data-control-type="DateTime"] {
+                    div.RadPicker.RadDateTimePicker {
+                        & > div.ui-wrapper {
+                            display: none;
+                        }
+                    }
+                }
+
+                div.ui-wrapper {
+                    width: 100% !important;
+                    margin-bottom: 0px !important;
+
+                    &.resizable-textarea {
+                        margin-bottom: -4px !important;
+                        max-width: inherit !important;
+                    }
+
+                    input.tbC {
+                        width: 100% !important;
+                        height: 24px !important;
+                        min-width: 90px;
+                        margin-right: auto;
+                        margin-left: auto;
+                        display: table;
+                    }
+
+                    select[controltype="DropDownList"] {
+                        height: 24px !important;
+                    }
+                }
+
+                &[data-control-type="DropDownList"] {
+                    select.ddlControls {
+                        box-sizing: border-box;
+                    }
+                }
+
+                &[data-control-type="Date"] {
+                    div {
+                        width: 100% !important;
+
+                        table.tblDtCtrl {
+                            margin-left: auto;
+                            margin-right: auto;
+                            margin-bottom: 0px;
+
+                            tr {
+                                td:nth-child(1) {
+
+                                    input[type="text"].ddlDtC {
+                                        height: 18px !important;
+                                        width: calc(100% + 10px) !important;
+                                        padding-left: 6px !important;
+                                    }
+                                }
+
+                                td:nth-child(2) {
+                                    &:after {
+                                        right: 6px !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .xmlFormRowControlTable {
+
+        &[formdesignername^="DropDownList"][data-dropdownlist-table="true"][data-role="droptarget"] {
+            td[data-mw-redesign="true"] {
+                div.ui-wrapper {
+                    max-width: 200px;
+                }
+            }
+        }
+
+        tr[data-radiobuttonlist-container="true"] {
+            td[data-mw-redesign="true"] {
+                table.cbC[role="radiogroup"][controltype="RadioButtonList"] {
+                    min-height: 20px !important;
+                }
+            }
+        }
+
+        td[data-help-desc-td="true"] {
+            top: 2px;
+        }
+
+        td[data-mw-redesign="true"], td[data-mw-redesign="true"] span {
+            & > div.ui-wrapper {
+                padding-right: 0px !important;
+                min-width: 200px;
+
+                input[controltype="TextBox"], input[controltype="Password"], input[controltype="Formatted"], input[controltype="Integer"], input[controltype="TimeInput"], input[controltype="Numeric"], input[controltype="Hidden"] {
+                    width: 100% !important;
+
+                    & + div.ui-resizable-handle.ui-resizable-e {
+                        margin-right: -12px;
+                    }
+                }
+            }
+
+            .RadDropDownTree.RadDropDownTree_Default {
+                background: none;
+            }
+        }
+
+        &[data-date-table="true"] {
+            td[data-mw-redesign="true"] {
+                min-width: 200px;
+                max-width: 200px;
+
+                table.tblDtCtrl[controltype="Date"] {
+                    div.ui-wrapper {
+                        max-width: 95px;
+                        min-width: 95px;
+
+                        div .ui-resizable-handle.ui-resizable-e {
+                            display: none;
+                        }
+                    }
+
+                    tbody {
+                        input.ddlDtC {
+                            min-width: 95px;
+                            max-width: 95px;
+                            padding-right: 3px !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        &[data-datetime-table="true"] {
+            td[data-mw-redesign="true"] {
+                div[controltype="DateTime"] {
+                    min-width: 200px;
+                    max-width: 200px;
+
+                    div.RadDateTimePicker.RadPicker {
+                        min-width: 210px;
+                        max-width: 210px;
+                        margin-left: -15px;
+
+                        div.RadInput {
+                            input .riTextBox {
+                                min-width: 150px;
+                                max-width: 150px;
+                            }
+
+                            div.rcSelect {
+                                left: 150px;
+                            }
+
+                            div.ui-wrapper {
+                                min-width: 150px;
+                                max-width: 150px;
+
+                                input.riTextBox {
+                                    min-width: 150px;
+                                    max-width: 150px;
+                                    padding-right: 10px !important;
+                                }
+
+                                div .ui-resizable-handle.ui-resizable-e {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.ui-droppable {
+            &[data-datetime-table="true"] {
+                td[data-mw-redesign="true"] {
+                    div[controltype="DateTime"] {
+                        div.RadDateTimePicker.RadPicker {
+                            margin-left: -13px;
+
+                            div.RadInput {
+                                div.rcSelect {
+                                    left: 160px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &[data-attachmentcontrol-table="true"] {
+            div[data-attachments-container="true"] {
+                table.AttachmentControl {
+                    td.pageSubHeaders {
+                        margin-top: 0 !important;
+
+                        strong {
+                            padding-top: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/*Link*/
+table[data-link-table="true"] {
+    tbody tr td {
+        a.HeaderloginLinks {
+            height: 24px;
+            line-height: 22px;
+            margin-bottom: 10px;
+            display: block;
+        }
+    }
+}
+/*form builder preview mode*/
+#pnlDesign {
+    #controlHolder {
+        &[data-render-mode="view"] {
+            padding-left: 5px;
+
+            div.ClientDynamicGrid {
+                margin-left: 0 !important;
+            }
+
+            td.pageSubHeaders {
+                margin-top: 15px;
+            }
+
+            table.xmlFormRowControlTable .xmlFormRowControlTable div[controltype="MultiPicker"] table.xmlFormInnerRowControlTable .btnC {
+                box-sizing: border-box;
+                margin-left: 7px;
+            }
+        }
+    }
+}
+
+div.ui-wrapper {
+    select[multiple="multiple"]:not([controltype="Listbox"]) {
+        height: 74px !important;
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,80 @@
+﻿
+
+table#tblHistory {
+    .workflow-legend-container {
+        display: block;
+        line-height: 30px;
+        font-size: 1.0em;
+
+        .workflow-legend {
+            display: inline-block;
+            margin-right: 5px;
+
+            &:before {
+                content: ' ';
+                display: inline-block;
+                width: 14px;
+                height: 14px;
+                border: 1px solid #ccc;
+                position: relative;
+                top: 3px;
+            }
+
+            &.pending:before {
+            }
+
+            &.completed:before {
+            }
+
+            &.failed:before {
+            }
+
+            &.wfcompleted:before {
+            }
+        }
+    }
+}
+
+#historypage #upWFlowContainer div.RadGrid div.rgHeaderDiv .rgMasterTable thead tr {
+    &.rgFilterRow td {
+        border-bottom: 1px solid transparent !important;
+        border-top: 1px solid transparent !important;
+        &.RadInput {
+            margin-bottom: 1px;
+        }
+        div.RadPicker {
+            & + input.rgFilter {
+                margin-bottom: 2px !important;
+            }
+        }
+    }
+    .rgFilter {
+        height: 24px !important;
+        &.wf-history-filtered-header {
+            background-image: url(/Images/Officebar/SVG/grid-filter-filtered.svg) !important;
+        }
+    }
+}
+
+.wf-legend {
+    width: 100%;
+}
+
+.wf-legend-txt span {
+    width: 100px;
+    float: left;
+    font-size: 12px;
+    text-align: left;
+}
+
+.wf-legend-txt span.wf-selected {
+    border-top: 2px dashed #2d9ed0;
+    margin: 7px 15px;
+    width: 50px;
+}
+
+.wf-legend-txt span.wf-current {
+    border-top: 4px solid #2d9ed0;
+    margin: 6px 15px;
+    width: 50px;
+}

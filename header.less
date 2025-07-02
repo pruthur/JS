@@ -1,0 +1,652 @@
+﻿@import "common-assets.less";
+@import "jstree.less";
+
+@headerHeightValue: 46;
+
+div.ui-layout-resizer-north {
+    display: none !important;
+}
+
+div.ui-layout-north-new {
+    height: @headerHeightValue + 0px;
+    width: 100%;
+    z-index: 4 !important;
+    position: fixed;
+    top: 0;
+
+    &.updated-for-zindex {
+        min-height: @headerHeightValue + 0px;
+        height: 100%;
+    }
+
+    .topBar {
+        height: (@headerHeightValue - 1) + 0px;
+
+        &:after {
+            .psuedo-after-border-bottom;
+        }
+
+        header.appMasterHeader {
+            height: (@headerHeightValue - 2) + 0px;
+            text-align: right;
+
+            section {
+                height: 100%;
+
+                &#addNewFavSection {
+                    & > div > span {
+                        text-align: center;
+                    }
+
+                    input {
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#logoSectionContainer {
+    float: left;
+
+    #logoContainer {
+        padding-top: 4px;
+
+        img {
+            width: 100px;
+            height: 35px;
+            margin-top: 5px;
+        }
+    }
+}
+
+#userOptionsContainer {
+    display: flex;
+    justify-content: flex-end;
+
+    & > div {
+        display: inline-block;
+        box-sizing: border-box;
+        position: relative;
+
+        &:after {
+            content: ' ';
+            width: 1px;
+            height: 36px;
+            margin-top: 5px;
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        &#userProfileContainer {
+            &.mouse-over-container {
+                z-index: 2002;
+            }
+
+            &:after {
+                content: none;
+            }
+        }
+    }
+
+    #BreadCrumbsContainer {
+        /*styles for breadcrumbs are in breadcrumbs.less*/
+    }
+
+    #favoritesContainer {
+        .favorites-container;
+    }
+
+    #userProfileContainer {
+        .user-profile-container;
+    }
+}
+
+.favorites-container {
+    z-index: 2001;
+
+    &.open {
+        z-index: 2002;
+
+        &:before {
+            content: ' ';
+            display: block;
+            position: fixed;
+            top: 45px;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+        }
+
+        #favoritesBody {
+            display: block;
+        }
+    }
+
+
+    #favoritesContent {
+        min-height: (@headerHeightValue - 2) + 0px;
+        width: 48px;
+
+        #favoritesControl {
+            height: (@headerHeightValue - 2) + 0px;
+            width: 100%;
+
+            #favoritesTrigger {
+                display: block;
+                height: 100%;
+                width: 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 16px;
+                background-image: url('/Images/toolbar/Icn_Addfavorite16.png'); /*TODO: HH - this is default case*/
+                cursor: pointer;
+            }
+        }
+    }
+
+    #favoritesBodyContainer {
+        position: fixed;
+        right: 62px;
+        top: 48px;
+        height: auto;
+        overflow: hidden;
+        box-sizing: border-box;
+        padding-top: 0px;
+        z-index: 2000;
+    }
+
+    #favoritesBody {
+        .common-box-shadow-bottom-narrow;
+        text-align: left;
+        display: none;
+        width: 250px;
+        height: auto;
+        max-height: 100%;
+        min-height: 75px;
+        overflow: hidden;
+        margin-top: 0;
+        position: relative;
+
+        #addNewFavContainer {
+            &.expanded {
+                & ~ #favoritesList {
+                    position: absolute;
+                    width: 100%;
+                    bottom: 0;
+                    height: 38px !important;
+                    padding: 0;
+
+                    .favoritesListContainer {
+                        display: none;
+                    }
+                }
+            }
+
+            #addPageAsNewFavorite {
+                .sub-section-clickable-title;
+                .common-box-shadow-bottom-narrow;
+                position: relative;
+
+                .mw-icon {
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 13px;
+                    font-size: 1.5em;
+                    height: 100%;
+                    line-height: 38px;
+                }
+            }
+
+            #addNewFavContent {
+                font-size: 0.8em;
+                padding: 10px 15px 25px 15px;
+
+                .addNewButton {
+                }
+
+                &.hidden {
+                    display: none;
+                }
+
+                div {
+                    padding: 10px 15px 0;
+
+                    span {
+                        display: block;
+
+                        label {
+                            font-weight: 600;
+                        }
+
+                        input[type="text"] {
+                            width: 100%;
+                            box-sizing: border-box;
+                        }
+
+                        select {
+                            width: 100%;
+                            height: 24px;
+                            box-sizing: border-box;
+
+                            &.ddlControls {
+                                min-width: 190px;
+                            }
+                        }
+                    }
+                }
+
+
+
+                section {
+                    &#addNewButton.fav-cb-section {
+                        padding: 0 0 0 2px;
+                        margin-bottom: -4px;
+
+                        div.addNewButton {
+                            /*margin-bottom: 12px;*/
+                            &.fav-cb {
+                                padding: 0;
+                            }
+
+                            & > span {
+                                padding: 0 0 0 14px;
+
+                                #cbNewFolder {
+                                    position: relative;
+                                    top: 0px;
+                                    left: -5px;
+                                    margin-right: 8px;
+
+                                    ~ label {
+                                        font-weight: 500;
+                                        font-size: 1em;
+                                        display: inline-block;
+                                        position: absolute;
+                                        width: 150px;
+                                        left: -1px;
+                                        top: 3px;
+                                        line-height: 14px;
+                                        /* &:before {
+                                        top: 2px;
+                                    }*/
+                                    }
+                                }
+
+                                .mw-clickable-link {
+                                    display: inline-block;
+                                    margin: 8px 0 12px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        #favoritesList {
+            /*margin-top: 4px;*/
+            overflow: hidden;
+            position: relative;
+            padding-top: 20px;
+            padding-bottom: 10px;
+            box-sizing: border-box;
+            min-height: 40px;
+            max-height: 300px;
+
+            &.full-tall {
+                height: calc(100% - 32px);
+            }
+
+            #favoriteListBtn {
+                .sub-section-clickable-title;
+                .common-box-shadow-bottom-narrow;
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 38px;
+                width: 100%;
+
+                &:after {
+                    display: block;
+                    height: 1px;
+                    width: 100%;
+                }
+
+                .mw-icon {
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 15px;
+                    font-size: 1.5em;
+                    height: 100%;
+                    line-height: 38px;
+                }
+            }
+
+            .favoritesListContainer {
+                margin-top: 10px;
+                height: 100%;
+
+                div.manage-fav {
+                    text-align: center;
+                    padding-top: 3px;
+                    span a#lnkManage.HeaderloginLinks {
+                        text-decoration: underline;
+                        font-size: 0.8em;
+                    }
+                }
+            }
+
+            #favTree {
+                .js-tree;
+
+             & > ul {
+                    max-height: 165px;
+                }
+
+                & > ul > li {
+                }
+
+                li {
+                    min-height: 34px !important;
+
+                    &.jstree-leaf:before {
+
+                        ins {
+
+                            img {
+                            }
+                        }
+                    }
+
+                    &.jstree-open, &.jstree-closed {
+                        & > ins {
+
+                            & + a {
+                            }
+                        }
+                    }
+
+                    a {
+                        height: 36px;
+
+                        nobr {
+                        }
+                    }
+
+                    .jstree-icon {
+                    }
+                }
+            }
+
+            :-ms-lang(x), #favTree {
+                transform: translateZ(0);
+            }
+            /*Search in favorites*/
+            #favoritesSearchInput {
+                width: 233px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 30px;
+                position: relative;
+
+                span.fav-filter-child {
+                    display: block;
+                    width: 20px;
+
+
+                    input.fav-search {
+                        padding-left: 28px;
+                        font-size: 14px;
+                        height: 24px;
+                        width: 174px;
+                    }
+
+                    span.mw-clear {
+                        cursor: pointer;
+
+                        &:after {
+                            content: ' ';
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            width: 28px;
+                            height: 26px;
+                        }
+                    }
+                }
+            }
+            /*Search in favorites*/
+        }
+    }
+}
+
+.user-profile-container {
+    position: relative;
+    height: (@headerHeightValue - 2) + 0px;
+    width: 62px;
+    padding: 0 20px;
+
+    #tblTabContainer {
+        #UserNameTd {
+            height: 32px;
+            position: absolute;
+            right: 15px;
+            font-size: 0.8em;
+            padding-top: 6px;
+
+            &.mouse-over {
+                z-index: 1;
+
+                ul#menu {
+                    transform: scale(1);
+                }
+
+                #profileOptionsDropdownBackground {
+                    display: block;
+                }
+
+                #lblUserName {
+                    &:after {
+                        content: ' ';
+                        display: block;
+                        position: absolute;
+                        right: 0px;
+                        height: 40px;
+                        width: 142px;
+                    }
+                }
+            }
+
+            #lblUserName {
+                display: block;
+                height: 30px;
+                line-height: 30px;
+                width: 30px;
+                text-transform: uppercase;
+                text-align: center;
+                border-radius: 50%;
+                cursor: pointer;
+                z-index: 1;
+            }
+
+            #profileOptionsDropdownBackground {
+                display: none;
+                position: fixed;
+                height: 100%;
+                width: 100%;
+                right: 0;
+                top: 40px;
+                cursor: default;
+            }
+
+            #menu {
+                transform: scale(0);
+                transition: all .2s ease-in-out;
+                transform-origin: right top;
+                border: 1px solid #efefef;
+                border-radius: 0px;
+                list-style-type: none;
+                margin: 0;
+                height: auto;
+                padding: 0;
+                width: 140px;
+                position: absolute;
+                right: 0;
+                top: (@headerHeightValue - 2) + 0px;
+                z-index: 1;
+
+                &:hover {
+                    transition: all .2s ease-in-out;
+                    transform: scale(1);
+                }
+
+                li {
+                    padding: 0 10px;
+                    height: 34px;
+                    line-height: 34px;
+                    cursor: pointer;
+                    text-align: left;
+                    z-index: 1;
+                    position: relative;
+
+                    &:hover {
+                        a {
+                        }
+                    }
+
+                    a {
+                        text-decoration: none !important;
+                        display: block;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#masterworksInfoContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+
+    #masterworksInfoSectionBg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    #masterworksInfoBody {
+        .common-box-shadow;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 45%;
+        max-width: 650px;
+        min-width: 550px;
+        margin: 0 auto;
+        padding: 0;
+        font-size: 0.8em;
+
+        & > section {
+            position: relative;
+
+            &#masterworksInfoLogoSection {
+                height: 116px;
+                text-align: center;
+                padding: 0 15px;
+                background-image: url('../../Images/mwredesign/about-bg.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+
+                img {
+                    margin-top: 18px;
+                    height: 80px;
+                }
+            }
+
+            &#masterworksInfoDetails {
+                text-align: center;
+                padding: 30px 15px 80px 15px;
+                position: relative;
+
+                &:before {
+                    content: ' ';
+                    position: absolute;
+                    height: 100px;
+                    width: 100%;
+                    bottom: 6px;
+                    left: 0;
+                    background-repeat: no-repeat;
+                    background-size: 180px;
+                    background-position: bottom left;
+                    background-image: url('../../Images/mwredesign/circuit-left.png');
+                }
+
+                &:after {
+                    content: ' ';
+                    position: absolute;
+                    height: 100px;
+                    width: 100%;
+                    bottom: 6px;
+                    left: 0;
+                    background-repeat: no-repeat;
+                    background-size: 180px;
+                    background-position: bottom right;
+                    background-image: url('../../Images/mwredesign/circuit-right.png');
+                }
+
+                #mwVersion {
+                    font-weight: 600;
+
+                    .caption {
+                        font-weight: 700;
+                    }
+
+                    .value {
+                    }
+                }
+
+                #mwCopyright {
+                    margin-top: 5px;
+                }
+            }
+
+            &#masterworksInfoFooter {
+                height: (@headerHeightValue - 8) + 0px;
+                line-height: (@headerHeightValue - 8) + 0px;
+                text-align: right;
+                padding: 0 30px 0 15px;
+
+                .mw-button {
+                    height: 26px !important;
+                    line-height: 26px !important;
+                    margin-top: 5px;
+                    padding: 0 15px;
+                    cursor: pointer;
+                    display: inline-block;
+                    margin-right: 0;
+                    &:before {
+                        content: '' !important;
+                    }
+                }
+            }
+        }
+    }
+}
+

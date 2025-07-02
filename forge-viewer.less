@@ -1,0 +1,54 @@
+﻿#forgeViewerDiv {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#forgeContainerDiv {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.model-div lmvheader icon {
+    top: 1px !important;
+}
+
+#ViewerPropertyPanel {
+    left: 450px !important;
+}
+
+.adsk-viewing-viewer {
+    &.light-theme .treeview, &.dark-theme .treeview {
+        div.visibility {
+            top: 2px !important;
+        }
+
+        .view lmvheader > icon {
+            top: -2px !important
+        }
+    }
+
+    &.notouch.dark-theme.quality-text {
+        overflow-y: scroll !important;
+    }
+
+    leaf > lmvheader > geom_icon, group > lmvheader > geom_icon {
+        margin-bottom: 3px;
+    }
+}
+
+#guiviewer3d-toolbar {
+    bottom: 10px;
+    position: fixed;
+}
+
+canvas[data-viewer-canvas="true"] {
+    height: auto !important;
+    width: 100% !important;
+}
+
+.treeview icon {
+    top: 3px !important;
+}

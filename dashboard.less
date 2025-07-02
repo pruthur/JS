@@ -1,0 +1,247 @@
+﻿@import "common-assets.less";
+
+.NewDashboard {
+    padding-left: 14px;
+    font-size: 1em;
+    position: absolute;
+    z-index: 999;
+    /*width: calc(100% - 30px);*/
+    width: 100%;
+
+    & ~ div[id$="_DashboardDetailsPanel"],
+    & ~ div[id$="_DashboardDesignPanel"] {
+        padding-top: 40px;
+    }
+
+    td {
+        font-weight: 600;
+        line-height: 30px;
+
+        select.ddlControls {
+            margin: 2px 10px 3px 0;
+        }
+    }
+
+    select {
+        border-radius: 3px;
+        min-width: 130px;
+        margin-right: 10px;
+    }
+
+    img {
+        height: 16px;
+        width: auto;
+        padding-right: 5px;
+        margin-top: -2px;
+    }
+
+    a {
+        padding: 0px 5px;
+        font-weight: 600;
+        height: 34px;
+        line-height: 30px;
+        display: inline-block;
+        margin: 0 2px 0 0;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        img {
+        }
+    }
+}
+
+span[id$="ReportViewer"] td,
+span[id$="_rptvwrReport_Toolbar"] td {
+    a[id*='_ButtonLink'] img[id$='_ButtonImg'],
+    table[title='Previous'] input[type="image"],
+    table[title='Next Page'] input[type="image"],
+    table[title='Previous Page'] input[type="image"],
+    table[title='First Page'] input[type="image"],
+    table[title='Last Page'] input[type="image"],
+    table[title='Go back to the parent report'] input[type="image"],
+    .report-action-btn,
+    table[title='Refresh'] input[type="image"][title="Refresh"],
+    img[title="Print Report"],
+    input[title="Show / Hide Parameters"] {
+        visibility: hidden;
+    }
+}
+
+.rpt-icon {
+    background-repeat: no-repeat !important;
+    background-size: 16px 90%;
+    background-position: center !important;
+    min-height: 16px;
+    min-width: 16px;
+    /*display: block;*/
+}
+
+.rpt-save-icon {
+    background-image: url(/Images/Officebar/SVG/save.svg);
+    background-position: left !important;
+
+    &.disabled-icon {
+        background-image: url(/Images/Officebar/SVG/Disabled/save.svg);
+    }
+
+    & > img[id$='_ButtonImgDown'] {
+        height: 10px !important;
+        width: auto !important;
+    }
+}
+
+.rpt-next-page-icon {
+    background-image: url(/Images/Officebar/SVG/next-page.svg);
+
+    &.disabled-icon {
+        background-image: url(/Images/Officebar/SVG/Disabled/next-page.svg);
+    }
+}
+
+.rpt-prev-page-icon {
+    background-image: url(/Images/Officebar/SVG/previous-page.svg);
+
+    &.disabled-icon {
+        background-image: url(/Images/Officebar/SVG/Disabled/previous-page.svg);
+    }
+}
+
+.rpt-first-page-icon {
+    background-image: url(/Images/Officebar/SVG/first-page.svg);
+
+    &.disabled-icon {
+        background-image: url(/Images/Officebar/SVG/Disabled/first-page.svg);
+    }
+}
+
+.rpt-last-page-icon {
+    background-image: url(/Images/Officebar/SVG/last-page.svg);
+
+    &.disabled-icon {
+        background-image: url(/Images/Officebar/SVG/Disabled/last-page.svg);
+    }
+}
+
+.rpt-back-to-report-icon {
+    background-image: url(/Images/Officebar/SVG/go-back-to-parent-report.svg);
+
+    &.disabled-icon {
+        background-image: url(/Images/Officebar/SVG/Disabled/go-back-to-parent-report.svg);
+    }
+}
+
+.rpt-print-report-icon {
+    background-image: url(/Images/Officebar/SVG/print-report.svg) !important;
+    height: 24px;
+    width: 24px;
+    display: block;
+    margin-top: 2px;
+
+    &.disabled-icon {
+        background-image: url(/Images/Officebar/SVG/Disabled/print-report.svg) !important;
+    }
+}
+
+.rpt-refresh-icon {
+    margin-top: 2px;
+    background-image: url(/Images/Officebar/SVG/refresh.svg);
+
+    &.disabled-icon {
+        background-image: url(/Images/Officebar/SVG/Disabled/refresh.svg);
+    }
+}
+
+.rpt-showParam-icon {
+    background-image: url(/Images/Officebar/horizontal-expand.png);
+    background-repeat: no-repeat !important;
+    background-size: 40px;
+    background-position: center !important;
+}
+
+.rpt-hideParam-icon {
+    background-image: url(/Images/Officebar/horizontal-collapse.png);
+    background-repeat: no-repeat !important;
+    background-size: 40px;
+    background-position: center !important;
+}
+
+span[id$="ReportViewer"] td .make-visible,
+span[id$="_rptvwrReport_Toolbar"] td .make-visible.report-action-btn {
+    &:hover {
+        border: 1px solid rgb(51, 102, 153);
+        background-color: rgb(221, 238, 247);
+    }
+
+    img {
+        visibility: visible !important;
+    }
+}
+
+
+//table.webZoneStyle[id*="DBControl"],
+table[id*="rptvwrReport"] {
+    div#customDiv {
+        & > table {
+            box-sizing: border-box;
+
+            &:hover {
+                border: 1px solid rgb(51, 102, 153);
+                background-color: rgb(221, 238, 247);
+                box-sizing: border-box;
+                margin-top: 0px;
+                cursor: pointer;
+
+                span {
+                    margin: -1px;
+
+                    img[alt="Print Report"] {
+                        &:hover {
+                            margin-top: 5px !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+div[id*="rptvwrReport"] {
+    table[title="Export"] a[id$="ButtonLink"] {
+        background-size: auto !important;
+
+        img[id$="ButtonImgDown"] {
+            margin-bottom: 3px !important;
+        }
+
+        :-ms-lang(x), img[id$="ButtonImgDown"] {
+            margin-left: 15px;
+        }
+    }
+
+    table[title="Refresh"] td.rpt-refresh-icon {
+        background-size: auto !important;
+    }
+
+    :-ms-lang(x), div[id$="rptvwrReport_ctl06_ctl04_ctl00"]{
+        font-size: 12px !important;
+    }
+}
+
+span[id$=ReportViewer] span[id$="rptvwrReport_Toolbar"] div * {
+    font-family: 'Open Sans',sans-serif !important;
+}
+
+div[id*="ReptViewer"] table[title="Export"] a[id$="ButtonLink"] img[id$="ButtonImgDown"] {
+    margin-bottom: 2px !important;
+}
+
+div[id*="ReptViewer"] {
+    span.rpt-print-report-icon{
+        width: 16px !important;
+        height:16px !important;
+        margin-top: 7px !important;
+    }
+}

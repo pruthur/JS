@@ -1,0 +1,219 @@
+﻿@import "common-assets.less";
+
+#BreadCrumbsContainer {
+    padding-right: 10px;
+    text-align: left;
+    font-size: 0.8em;
+
+    & * {
+        box-sizing: border-box;
+    }
+
+    #breadCrumbContent {
+        height: 100%;
+        position: relative;
+
+        #popupBreadCrumbsMenu {
+            display: inline-block;
+            height: 100%;
+            width: 60px;
+            text-align: right;
+
+            #breadCrumbsMenuBtn {
+                display: none;
+                height: 40px;
+                width: 30px;
+                line-height: 45px;
+                margin: 0 5px 0 0;
+                position: relative;
+
+                & + span {
+                    display: none;
+                    position: relative;
+                    top: 5px;
+                    font-size: 1.4em;
+                }
+            }
+
+            &.active {
+                #breadCrumbsMenuBtn {
+                    display: inline-block;
+                    cursor: pointer;
+
+                    #trigger {
+                        &:hover {
+                            text-decoration: underline;
+                        }
+
+                        & + span.bcsep {
+                            position: absolute;
+                            left: 100%;
+                            top: 19px;
+                            height: 8px;
+                            width: 8px;
+                            background: transparent;
+                            border-right: 1px solid;
+                            border-top: 1px solid;
+                            transform: rotate(45deg);
+                        }
+                    }
+                    /*img {
+                        height: 16px;
+                        width: 16px;
+                        display: inline-block;
+                    }*/
+                    /* & + span {
+                        display: inline-block;
+                        pointer-events: none;
+                    }*/
+                }
+            }
+        }
+
+        #listBreadCrumb {
+            padding: 0;
+            height: 100%;
+            display: inline-block;
+            vertical-align: top;
+
+            #breadCrumbMenuLi {
+                position: absolute;
+                min-height: 40px;
+                right: calc(100% - 20px) !important;
+
+                ul {
+                    li {
+                        display: none;
+                    }
+                }
+
+                &.layover {
+                    top: 48px;
+                    margin-right: -40px;
+                    z-index: 1;
+
+                    #breadCrumbMenuLiBG {
+                        display: block;
+                        height: 100%;
+                        width: 100%;
+                        position: fixed;
+                        left: 0;
+                        top: 0;
+
+                        &:before {
+                            content: ' ';
+                            display: block;
+                            height: 100%;
+                            position: relative;
+                            top: 45px;
+                        }
+                    }
+
+                    ul {
+                        .common-box-shadow;
+                        list-style-type: none;
+                        padding-left: 0px;
+                        margin: 0px;
+                        max-width: 250px;
+                        position: relative;
+                        z-index: 1;
+
+                        li {
+                            display: block;
+                            padding: 0;
+                            height: 34px;
+                            line-height: 34px;
+
+                            a {
+                                display: block;
+                                font-weight: 500;
+                                padding: 0 10px;
+                                text-decoration: none;
+                                height: 100%;
+                                line-height: 34px;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+
+                                &:hover, &:active {
+                                    text-decoration: underline;
+                                }
+                            }
+
+                            span {
+                                display: block;
+                                font-weight: 500;
+                                padding: 0 10px;
+                                height: 100%;
+                                line-height: 34px;
+                                white-space: nowrap;
+                            }
+
+                            bcsep {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+
+            #breadCrumbDisplayLi {
+                height: 100%;
+
+                ul {
+                    display: flex;
+                    justify-content: flex-end;
+                    list-style-type: none;
+                    padding-left: 0px;
+                    margin: 0px;
+                    height: 100%;
+
+                    li {
+                        line-height: 40px;
+                        padding: 0 5px 0 3px;
+                        margin: 0px;
+                        position: relative;
+
+                        a {
+                            display: block;
+                            font-weight: 600;
+                            font-size: 0.9em;
+                            padding: 0px 3px;
+                            margin: 0px;
+                            text-decoration: none;
+                            height: 100%;
+                            line-height: 45px;
+
+                            &:hover, &:active {
+                                text-decoration: underline;
+                            }
+                        }
+
+                        span {
+                            line-height: 45px;
+
+                            &.bcsep {
+                                position: absolute;
+                                right: 0;
+                                top: 19px;
+                                height: 8px;
+                                width: 8px;
+                                background: transparent;
+                                border-right: 1px solid;
+                                border-top: 1px solid;
+                                transform: rotate(45deg);
+                            }
+
+                            &.current-page-ref {
+                                font-size: 0.9em;
+                                padding: 0px 3px;
+                                cursor: default;
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

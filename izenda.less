@@ -1,0 +1,410 @@
+﻿
+.search-container {
+    position: relative;
+    float: right;
+    text-align: right;
+
+    .find, .clear {
+        position: absolute;
+        top: 0px;
+        width: 45px;
+        height: 45px;
+        z-index: 2;
+    }
+
+    #fieldSearch {
+        position: relative;
+        width: 10em;
+        font-size: 24px;
+        line-height: 29px;
+        height: 39px;
+        z-index: 1;
+        padding-right: 44px;
+
+        &::-ms-clear {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+    }
+
+    .find {
+        right: 289px;
+        background: url(/Images/mwredesign/search-white.svg);
+        padding: 5px;
+        box-sizing: border-box;
+        background-size: 32px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .clear {
+        right: 0px;
+        background: transparent url(/Images/mwredesign/close-blue.svg);
+        opacity: .5;
+        padding: 5px;
+        box-sizing: border-box;
+        background-size: 16px;
+        background-position: center;
+        background-repeat: no-repeat;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+table.ReportTable {
+    tr.ReportHeader {
+        th {
+            border: none;
+            font-weight: 500;
+        }
+    }
+}
+
+/*reports*/
+
+div.TabStrip {
+    margin-top: 20px;
+    margin-bottom: 0px;
+
+    .ActiveTab {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+
+        .MiddlePart {
+            padding-bottom: 2px;
+            border-radius: 5px 5px 0px 0px;
+
+            &:hover {
+            }
+        }
+    }
+}
+
+
+span.database-name {
+    font-weight: 600;
+}
+
+div.TabStrip {
+    table {
+        tbody {
+            tr {
+                td {
+                    table {
+                        &:after {
+                            content: ' ';
+                            width: 1px;
+                            right: -1px;
+                            bottom: 8px;
+                            margin-top: 0px;
+                            padding-top: 0px;
+                            height: 20px;
+                            display: inline-block;
+                            position: absolute;
+                            z-index: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+div[id^='PlaceHolder_'] {
+    input[type="button"] {
+        line-height: 26px;
+        height: 26px;
+        font-weight: 400;
+        padding-top: 0px;
+    }
+
+    div {
+        table {
+            tbody {
+                tr {
+                    td {
+                        table {
+                            tbody {
+                                tr {
+                                    td {
+                                        padding-right: 3px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+div[name=showHideMeInIE6] {
+    font-weight: 600;
+    padding-left: 20px;
+    padding-top: 15px;
+}
+
+th.iz-label {
+    span {
+        font-family: 'Open Sans', sans-serif !important;
+    }
+}
+
+tr.ReportHeader {
+    td {
+        font-family: 'Open Sans', sans-serif !important;
+    }
+}
+
+div.MultivaluedCheckbox {
+    input {
+        top: -1px;
+        left: -2px;
+    }
+}
+
+div.TabStrip {
+    td.MiddlePart {
+        font-family: 'Open Sans',sans-serif;
+        text-transform: capitalize;
+        font-weight: 600;
+    }
+}
+
+:-ms-lang(x), div.TabStrip > table > tbody > tr > td {
+    margin-left: -4px;
+}
+
+div.fields-section {
+    a.field {
+        span.field-name {
+            font-weight: 600;
+        }
+    }
+}
+
+div[name=showHideMeInIE6] {
+    td {
+        input[name*='_sm_Title'] {
+            width: 270px !important;
+        }
+
+        input[name*='_gauge_Title'] {
+            width: 200px !important;
+        }
+
+        input[name*='_gauge_GaugeMax'] {
+            margin-left: 29px !important;
+        }
+
+        input[name*='ArithmeticOperationCurrentValue'] {
+            width: 9px !important;
+        }
+
+        input[type="radio"][name*='_gauge_Format'] {
+            margin-left: 7px;
+            margin-right: -2px;
+        }
+
+        textarea[name*='_miscControls_recipients'] {
+            width: 99% !important;
+        }
+    }
+
+    td[id$='ChartTitle'] {
+        padding-left: 9px;
+    }
+
+    td[id$='ChartRecordsLabel'] {
+        padding-left: 45px;
+    }
+}
+
+body ul.nav-tabs > li.active {
+    border-radius: 5px 5px 0px 0px !important;
+
+    a, a:hover {
+        border-radius: 5px 5px 0px 0px !important;
+        margin-bottom: 0px !important;
+    }
+}
+
+ul.nav-tabs > li > a {
+    margin-bottom: 0px !important;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+span.iz-ui-dialog-title {
+    font-weight: 500;
+}
+
+div.multi-valued-check-advanced {
+    label {
+        margin: 0px !important;
+    }
+}
+
+tr.field-prop-row,
+tr.filter-prop-row {
+    td {
+        padding-bottom: 4px;
+        font-weight: 600;
+    }
+}
+
+div#msgAboutBottom {
+    display: none !important;
+}
+
+tr.field-prop-row, tr.filter-prop-row {
+    input, select, textarea {
+        padding: 3px;
+    }
+}
+
+div#fieldPropDiv {
+    font-size: 14px;
+    font-weight: 600;
+
+    div {
+        > label {
+            margin-left: 5px;
+        }
+    }
+
+    td {
+        > input[id^='prop'] {
+            margin-right: 9px;
+            margin-left: 1px;
+        }
+
+        > label {
+            margin-right: 5px;
+        }
+    }
+}
+
+
+/*master reset of background image for izenda as a fix*/
+div.opened span.plus-minus {
+    background-image: url('/Modules/REPORTS/Resources/FromDLL/Resources/ModernImages/minus-black.png');
+}
+
+div.tabbable {
+    ul.nav-tabs {
+        li {
+            margin-left: 0px;
+            margin-right: 0px;
+            width: 60px;
+
+            a {
+                padding-left: 7px;
+                padding-right: 7px;
+            }
+        }
+
+        li:after {
+            content: ' ';
+            width: 1px;
+            margin-top: 0px;
+            height: 20px;
+            top: 4px;
+            margin-left: 60px;
+            display: inline-block;
+            position: absolute;
+            z-index: 1;
+        }
+    }
+}
+
+.iz-ui-widget-content {
+    max-height: 80%;
+    max-width: 90%;
+    overflow: auto !important;
+
+    &.iz-ui-dialog, &.iz-ui-dialog-buttonpane {
+        overflow: hidden !important;
+    }
+}
+
+#rightHelpDiv {
+    #previewH2 {
+        a {
+            padding-top: 1px !important;
+            padding-bottom: 1px !important;
+
+            img {
+                height: 24px !important;
+                width: 24px !important;
+                margin: 10px 0 0 0 !important;
+            }
+        }
+    }
+}
+
+.iz-ui-dialog-content.iz-ui-widget-content {
+    div[id="_ReportsDiv"] {
+        height: 300px;
+        width: 266px;
+        overflow: auto !important;
+    }
+}
+
+#data-source-field {
+    margin-right: 0px;
+    :-ms-lang(x), .reportSamplePreview {
+        display: table !important;
+    }
+}
+
+div.iz-rl-left-panel {
+    .iz-rl-search-panel {
+        & > input[type="text"] {
+            height: 24px;
+        }
+    }
+
+    h2 {
+        font-size: 14px;
+        font-weight: 700;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    div#leftSideCats, div#recentReports {
+        ul.iz-rl-category-list {
+            & > li.category-item {
+                padding-left: 20px;
+                font-size: 13px;
+                font-weight: 600;
+                font-family: 'Open Sans', sans-serif;
+                & > a.category-item-text {
+                    padding-left: 0px;
+                }
+            }
+        }
+    }
+
+    div#recentReports {
+        ul.iz-rl-category-list {
+            & > li.category-item {
+                list-style: square;
+                list-style-position: inside;
+
+                & > a.category-item-text {
+                    display: inline;
+                }
+            }
+        }
+    }
+}
+
+div.iz-rl-search-panel > .search-icon {
+    transform: rotateY(180deg);
+}

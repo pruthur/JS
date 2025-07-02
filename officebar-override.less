@@ -1,0 +1,273 @@
+﻿/*FACELIFT: Migrating the color part of jquery.ribbon_LightBlue.css here*/
+@import "common-assets.less";
+
+div.officebar {
+    height: 30px;
+
+    div.buttonsplitmenu {
+        padding-top: 2px;
+        a:hover {
+            line-height: 21px;
+        }
+    }
+
+    + div [role="tabpanel"] {
+        margin-top: 10px;
+    }
+
+    ul {
+        position: relative;
+
+        &:after {
+            .psuedo-after-border-bottom;
+        }
+
+        li {
+            height: 30px;
+
+            &:hover {
+            }
+
+            &.current {
+                &.lifocus {
+                }
+
+                a {
+                }
+            }
+
+            &.lifocus {
+            }
+        }
+    }
+
+    a {
+        text-transform: uppercase;
+        padding: 0 15px;
+        line-height: 26px;
+
+        &:hover {
+        }
+    }
+}
+
+div.officetab {
+    ul {
+        li {
+            &:hover {
+            }
+
+            div.separator {
+            }
+
+            div.textlist {
+                div ul li.dropdown a {
+                    &.opened {
+                    }
+
+                    &:hover {
+                    }
+                }
+
+                a {
+                    &:hover {
+                        span {
+                        }
+                    }
+
+                    &.opened {
+                        span {
+                        }
+                    }
+                }
+            }
+
+            div.button {
+                a {
+                    &:hover {
+                    }
+                }
+            }
+
+            div.list {
+                a {
+                    &:hover {
+                    }
+                }
+            }
+
+            div.split {
+                &:hover {
+                    a {
+                        span {
+                        }
+                    }
+                }
+
+                a {
+                    span {
+                    }
+                }
+            }
+        }
+    }
+
+    div.panel {
+        ul {
+            li {
+                &:hover {
+                }
+            }
+        }
+    }
+}
+
+div.buttonsplitmenu {
+    ul {
+        li {
+            &:hover {
+            }
+
+            &.menutitle {
+                &:hover {
+                }
+            }
+
+            &.separator {
+                a {
+                }
+            }
+
+            &.resize {
+                &:hover {
+                }
+
+                span {
+                }
+            }
+
+            a {
+                font-weight: 500;
+                span {
+                    font-weight: 500;
+                }
+            }
+
+            a:hover {
+            }
+        }
+    }
+}
+
+
+/* ******************************************************* Layout CSS *********************************************************/
+
+.topBar {
+    /*background-image: url('/Images/Themed Images/lightblue/topbarbg.png') !important;*/
+}
+
+ul.menu li {
+    /*background-image: url('/Images/Themed Images/lightblue/bg_tab.gif');*/
+}
+
+ul.menu li.active {
+    /*background-image: url('/Images/Themed Images/lightblue/bg_tab_active.gif');*/
+}
+
+ul.menu li:hover {
+    /*background-image: url('/Images/Themed Images/lightblue/bg_tab_hover.gif');*/
+}
+
+.treeTop {
+    /*background-color: #e4edf9;*/
+}
+
+.treeTopBorder {
+    /*border: solid 1px #8db2e3;*/
+}
+
+.divExpand {
+    /*background: transparent url('/Images/Themed Images/lightblue/expandTree.png') no-repeat center;*/
+}
+
+.divCollapse {
+    /*background: transparent url('/Images/Themed Images/lightblue/collapseTree.png') center no-repeat;*/
+}
+
+.divCollapseMenu {
+    /*background: transparent url('/Images/Themed Images/lightblue/Icn_CollapseMenu.png') center no-repeat;*/
+}
+
+.divExpandMenu {
+    /*background: transparent url('/Images/Themed Images/lightblue/Icn_ExpandMenu.png') center no-repeat;*/
+}
+
+.divExpandfocus, .divCollapsefocus, .divCollapseMenufocus, .divExpandMenufocus {
+    /*background-color:#ffe18a;*/
+}
+
+.navigationTreeBorder {
+    /*border-bottom: solid 1px #8db2e3;*/
+}
+
+.ui-layout-resizer {
+    /*background-color: #dbe0f5;*/
+}
+
+.ui-layout-pane {
+    /*border: solid 1px #8db2e3;*/
+}
+/************************************************* Webpart style  ********************************************************************/
+.webZonePartTitleStyle td {
+    /*background-image: url('../../Images/Themed Images/lightblue/topbarbg.png') !important;*/
+}
+
+ul.menu li a:focus {
+    font-weight: 900;
+}
+
+.treeTopBorder {
+    text-align: center;
+}
+
+.divExpand {
+    min-height: 20px;
+}
+
+.divCollapse {
+    min-height: 20px;
+}
+
+.divCollapseMenu {
+    min-height: 20px;
+}
+
+.divExpandMenu {
+    min-height: 20px;
+}
+
+/************************************************* Webpart style  ********************************************************************/
+/*For the picker */
+div.Dialogg td {
+    white-space: nowrap;
+}
+
+#MainToolBar_upToolbar {
+    position: relative;
+    z-index: 2;
+
+    .RadRibbonBar {
+        position: relative;
+        z-index: 1;
+
+        &:after {
+            content: ' ';
+            height: 1px;
+            width: 100%;
+            display: block;
+            position: absolute;
+            bottom: 1px;
+            left: 0;
+        }
+    }
+}

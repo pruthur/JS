@@ -1,0 +1,54 @@
+﻿#toast-container {
+    right: 31px;
+    font-size: .9em;
+    font-family: 'Open Sans',sans-serif !important;
+
+    .toast-close-button {
+        margin-top: -10px;
+        font-size: 30px;
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        /*display: none !important;*/
+    }
+
+    .toast {
+        padding: 15px 30px 25px 50px;
+        width: 300px;
+        background-size: 25px 25px;
+        background-position: 12px center;
+        position: relative;
+        padding-bottom: 1.3em;
+
+        &.toast-error {
+            background-image: url(/Images/mwredesign/alerts/error.svg) !important;
+        }
+
+        &.toast-warning {
+            background-image: url(/Images/mwredesign/alerts/warning.svg) !important;
+        }
+
+        &.toast-info {
+            background-image: url(/Images/mwredesign/alerts/info.svg) !important;
+        }
+
+        &.toast-success {
+            background-image: url(/Images/mwredesign/alerts/success.svg) !important;
+        }
+        /*  &:before, &:after {
+            content: ' ';
+            display: block;
+            height: 15px;
+            width: 3px;
+            position: absolute;
+            top: 10px;
+            right: 18px;
+            border-radius: 3px;
+            transform: rotateZ(135deg);
+        }
+*/
+        /* &:after {
+            transform: rotateZ(45deg);
+        }*/
+    }
+}

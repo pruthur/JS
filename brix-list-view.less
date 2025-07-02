@@ -1,0 +1,274 @@
+﻿div.RadGrid {
+    .rgMasterTable {
+        tbody {
+             tr {
+                &.rgGroupHeader {
+                    td {
+                        &.rgGroupCol {
+                            .rgActionButton {
+                            }
+                        }
+                    }
+                }
+
+                &.old-rgRow, &.old-rgAltRow {
+                    td {
+                        padding: 0 5px;
+                        font-weight: 600;
+                        line-height: 18px;
+                        white-space: normal;
+
+                        &.rgGroupCol {
+                        }
+
+                        a {
+                        }
+                    }
+                }
+            }
+
+            tr.rgSelectedRow {
+                td {
+                }
+            }
+        }
+    }
+}
+
+
+
+div.RadGrid {
+
+    .rgMasterTable {
+        colgroup {
+        }
+
+        tbody {
+            tr {
+                &.old-rgRow, &.old-rgAltRow {
+                    height: 34px !important;
+                    /*commenting it for bug id 392883*/
+                    /*border-width: 0px !important;*/
+                    cursor: pointer;
+
+                    td {
+                        text-overflow: inherit;
+
+                        span {
+                            &.cbC {
+                                display: block;
+                                text-align: center;
+                                margin: 0 auto;
+
+                                input[type='checkbox'] {
+                                    left: 5px !important;
+                                }
+                            }
+
+                            &.aspNetDisabled, &.aspNetDisabled.cbC, &[disabled="disabled"] {
+                                input[type='checkbox'] {
+                                    display: block !important;
+                                    margin: 3px 3px 3px 4px !important;
+                                }
+                            }
+                        }
+
+                        input[type='checkbox'] {
+
+                            &[id*='MultiSelectCheckBox'] {
+                                /*margin: 0 auto;*/
+                                display: block;
+                            }
+                        }
+
+                        &.rgGroupCol {
+                        }
+
+                        &.rgDragCol {
+                            padding: 0 !important;
+                            a.rgDragIcon {
+                                padding: 0px;
+                                text-decoration: none;
+
+                                .t-ripple-container {
+                                    display: none !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*Particular to filter section of Listpage*/
+.RadGrid.MWGrid {
+
+    .rgMasterTable.MWGrid-ShowEmptyCells-ie11-fix {
+        tr.old-rgRow, tr.old-rgAltRow {
+            td {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+
+        tr {
+            td.rgBatchCurrent {
+                padding: 0 !important;
+
+                .rgBatchContainer {
+
+                    input[type="text"] {
+                        max-height: 24px !important;
+                        padding: 2px !important;
+                        margin-left: 2px !important;
+                        width: 93%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+div.RadGrid {
+
+    .rgMasterTable {
+
+        .rgBatchCurrent {
+            select.ddlControls {
+                min-width: inherit;
+            }
+
+            .rgBatchContainer {
+                span.RadInput.riSingle {
+                    width: 100% !important;
+                    margin-bottom: initial;
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                &.rgGroupHeader {
+                    td {
+                        &.rgGroupCol {
+                            .rgActionButton {
+                            }
+                        }
+                    }
+                }
+
+                &.old-rgRow, &.old-rgAltRow {
+                    td {
+                        vertical-align: middle !important;
+
+                        &.gridInlineEditing:not(.cellDisabled) {
+
+                            &.rgBatchCurrent {
+                                div.rgBatchContainer {
+                                    div.RadPicker.RadPicker_Material {
+                                        div.rcSelect {
+                                            a.rcCalPopup {
+                                                margin-right: -8px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &.rgDragCol a.rgDragIcon {
+                            background: url("/Images/mwredesign/drag-and-position.svg") !important;
+                            background-repeat: no-repeat;
+                            margin-bottom: 1px;
+
+                            &:before {
+                                content: ' ';
+                            }
+                        }
+
+                        span.mw-customcheckbox, .cbC {
+                            vertical-align: middle !important;
+
+                            input[type="checkbox"] {
+                                display: block;
+                            }
+
+                            .mw-customcheckbox-label {
+                                display: block;
+                            }
+                        }
+
+                        &.rgGroupCol {
+                        }
+
+                        &.rgBatchCurrent {
+                            padding: 0 5px !important;
+
+                            .rgBatchContainer {
+                                width: 100%;
+                                max-width: 100%;
+
+                                .RadPicker {
+                                    width: 100%;
+                                    padding: 0 10px 0 0;
+                                    box-sizing: border-box;
+
+                                    .RadInput {
+                                        padding-right: 30px;
+                                    }
+                                }
+                            }
+
+                            div.rgBatchContainer {
+                                div.ddlControls.RadComboBox[data-control-type="DropDownList"] {
+                                    margin: 0px;
+                                    margin-top: -2px;
+                                }
+                            }
+
+                            div.ddlControls[data-control-type="DropDownList"] {
+                                margin: 0 5px;
+                            }
+
+                            .rcbArrowCellRight {
+                                padding: 0 3px;
+                            }
+                        }
+
+                        a {
+                        }
+
+                        .rcbReadOnly .rcbInputCell:after {
+                            top: 10px;
+                            right: -20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+table.rgMasterTable.rgClipCells {
+    tr {
+        &.old-rgRow, &.old-rgAltRow {
+            line-height: 18px;
+            /*word-break: break-all;*/
+
+            & > td.rgBatchChanged {
+                input[type="text"] {
+                    padding: 2px !important;
+                    height: 24px !important;
+                    line-height: 24px !important;
+                }
+            }
+        }
+    }
+}
+
+div[data-render-mode="new"] .DynamicGrid div.RadGrid .rgMasterTable tbody tr.old-rgAltRow td.rgBatchCurrent div.ddlControls[data-control-type=DropDownList] {
+    margin: 0;
+}

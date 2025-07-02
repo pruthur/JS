@@ -1,0 +1,299 @@
+﻿@import "buttons-common.less";
+
+button[type="submit"].RadButton {
+    .mw-button;
+
+    span.rbText {
+        font-size: 12px;
+    }
+}
+
+input[type="submit"],
+input[id$="btnShowPicker"][type="submit"],
+input[type="button"][id$="LinkDocument"],
+input[type="file"][id$="UploadFileControl"],
+button#deleteElement-button,
+button#newifelse,
+input[id="btnCopyRoles"][type="button"],
+button.k-button {
+    .mw-button;
+}
+
+.ui-dialog {
+    input[type="submit"],
+    input[id$="btnShowPicker"][type="submit"],
+    input[type="button"][id$="LinkDocument"],
+    input[type="file"][id$="UploadFileControl"] {
+        margin: 5px 10px 5px 5px !important;
+    }
+
+    td.tdTextAlignRgt {
+        & ~ td[data-mw-redesign="true"] {
+            input[type="file"][id$="UploadFileControl"],
+            input[type="button"][id$="LinkDocument"] {
+                margin: 0px 10px 0px 0px !important;
+                /* top: 10px;*/
+                /*width: 110px;*/
+                & + span[preservereadst="false"] {
+                    margin-bottom: 0 !important;
+                    line-height: 24px !important;
+                }
+            }
+
+            input[type="button"][id$="LinkDocument"] {
+                margin-top: 10px !important;
+            }
+
+            div.k-dropzone span[preservereadst="false"] {
+                line-height: 34px !important;
+            }
+        }
+    }
+
+    .PickerFilterStyle input[type="submit"] {
+        margin-top: 0 !important;
+    }
+
+    div[id$='_aspPnlDocumentPicker'] {
+        input[type="submit"] {
+            margin: 0 10px 0 0 !important;
+        }
+    }
+
+    input[type="submit"][id$="ColumnSettings_btnCancel"],
+    input[type="submit"][id$="ColumnSettings_btnSave"] {
+        margin-left: 0 !important;
+    }
+}
+
+.ui-droppable {
+    td[data-mw-redesign="true"] {
+        input[id$="btnShowPicker"][type="submit"] {
+            margin: 0 0 10px 0;
+        }
+    }
+}
+
+#HeaderTableID input[id$="Filter_Name"] {
+    width: 24px !important;
+    float: right;
+}
+
+.mw-design#coreMainControlDiv td[id$='standardItemPickerValueContainer'] {
+    span[id$='txtStandardItemNoLabel'] + table input.tbC[type="text"] {
+        margin-top: 0px !important;
+
+        & + input[name$="selectedText"] {
+            margin-left: 0;
+            padding-right: 3px !important;
+        }
+    }
+}
+
+_:-ms-lang(x), .mw-design#coreMainControlDiv td[id$='standardItemPickerValueContainer'] {
+    input[id="C1_ctl73_stdItemNumber_btnShowPicker"] {
+        margin-left: 7px !important;
+    }
+}
+
+
+div[id$='pickerInflation'] {
+    input.aspNetDisabled[id$="txtInflationRule"] + input.btnC[id$="btnShowPicker"] {
+        margin-left: 2px !important;
+    }
+}
+
+input[id$="btnShowPicker"] {
+    width: auto !important;
+}
+
+div.k-widget {
+    border-radius: 0;
+    border: none;
+
+    div.k-button.k-upload-button,
+    button.k-button.k-upload-selected,
+    button.k-button.k-clear-selected {
+        .mw-button;
+    }
+}
+
+#rightTabStrip {
+    .btnC {
+        padding: 0 6px;
+        margin: 0 6px 0 0;
+    }
+}
+
+div.k-dropzone {
+    padding: 0px;
+
+    div.k-button {
+        &.k-upload-button {
+            margin-top: 10px;
+        }
+    }
+}
+
+
+.k-filter-menu {
+
+    span.k-dropdown {
+        span.k-select {
+            span.k-icon {
+                top: -3px;
+            }
+        }
+    }
+
+    .k-button {
+        margin-top: 0px;
+    }
+}
+
+.k-animation-container {
+    .k-filter-menu {
+        .k-button {
+            margin-top: 5px !important;
+        }
+    }
+}
+
+
+table[id*="_tblAttachments"] {
+    input[type="image"] {
+        padding: 4px;
+
+        &:hover {
+        }
+    }
+}
+
+.tabmaster-container td span input[type="submit"]:first-child,
+table[id*="_tblAttachments"] tr[id$="_trUpload"] td[id$="_tdLinkDocument"] input[type="button"] {
+    margin-left: 0;
+}
+
+div[id$="_DashboardDesignPanel"] {
+    input[type="button"] {
+        .mw-button;
+        font-size: .9em !important;
+        margin: 0 0 0 5px;
+    }
+}
+
+
+div#divQueryBuilderResourcePicker {
+    input[type="button"] {
+        .mw-button;
+    }
+}
+
+input[type="button"].k-button.k-upload-button {
+    .mw-button;
+}
+
+div.k-button.k-upload-button input[aria-label="Upload Document"] {
+    z-index: 1000 !important;
+}
+.ui-dialog {
+    div.k-button.k-upload-button input[aria-label="Upload Document"] {
+        z-index: 10000 !important;
+    }
+}
+
+/* Editor notes  */
+.RadEditor_Default[controltype="RichTextBox"] {
+    div.reBottomProperties {
+        .reRow {
+            .reModes {
+                a, a.reSelectedMode {
+                    .mw-button;
+                }
+            }
+        }
+    }
+}
+
+div#divResourcePicker.k-window-content.k-content {
+    input.btn[type="button"] {
+        .mw-button;
+    }
+}
+
+#splitter button#newAction {
+    .mw-button;
+    font-weight: 600 !important;
+}
+
+#divFilterManager {
+    button.btn.btn-default {
+        .mw-button;
+    }
+}
+
+button.btnSession.ui-button[type=button] {
+    .mw-button;
+}
+
+.k-command-cell {
+    a.k-button.k-button-icontext {
+        .mw-button;
+    }
+}
+
+a.k-button.k-button-icontext.k-primary.k-grid-update {
+    .mw-button;
+}
+
+table[id$="rptvwrReport_fixedTable"] {
+    div[id*="rptvwrReport"] {
+        input[type="submit"] {
+            .mw-button;
+        }
+    }
+}
+
+
+div#ganttFilterPopupPanel.ui-dialog {
+    div.ui-dialog-buttonset button.ui-button.ui-widget.ui-corner-all {
+        .mw-button;
+        font-size: 12px;
+        margin-right: 10px !important;
+    }
+}
+
+span[id$="_upWorkflow"] {
+    margin-left: 3px;
+
+    input[id$="_btnSave"][type="button"] {
+        margin-top: 5px !important;
+        margin-bottom: 5px !important;
+        .mw-button;
+    }
+}
+
+div[id$="_divExpDesigner"] {
+    div[id$="_ExpDesigner_pnlOutputTreeDatatype"] {
+        input[type="button"] {
+            .mw-button;
+        }
+    }
+}
+
+.ui-dialog .mw-approval-workflow tr td div.k-button.k-upload-button[aria-label="Upload Document"] span {
+    .mw-button;
+    margin: 0 !important;
+    font-size: 12px;
+}
+button.btn.btn-default.dlg-close {
+    .mw-button;
+    height: 30px !important;
+}
+
+/*standard item table button*/
+input.btnC[type="submit"][id$="_stdItemNumber_btnShowPicker"] {
+    position: absolute;
+    right: 15px;
+    bottom: 18px;
+}

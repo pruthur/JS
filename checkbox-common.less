@@ -1,0 +1,664 @@
+﻿/*custom checkbox starts here*/
+.mwcustom-checkbox {
+    display: inline-block !important;
+    height: 20px;
+    width: 20px;
+    position: relative;
+    margin-left: 5px;
+
+    span {
+        opacity: 0;
+        height: 0;
+        width: 0;
+        display: block;
+        overflow: hidden;
+    }
+
+    .pseudo-checkbox {
+        display: block;
+        height: 100%;
+        width: 100%;
+        border: 1px solid;
+        border-radius: 4px;
+        z-index: 1001;
+    }
+}
+
+.mw-customcheckbox {
+    display: inline-block;
+    min-height: 16px !important;
+    min-width: 16px !important;
+    position: relative;
+    .genericCheckboxDesign;
+}
+
+/*header checkbox design*/
+.genericHeaderCheckboxDesign {
+    input[type="checkbox"] {
+        display: inline;
+        height: 16px !important;
+        width: 16px !important;
+        cursor: pointer;
+
+        & + label {
+            position: relative;
+            cursor: pointer;
+            padding: 0 0 0 20px !important;
+            font-size: 1em !important;
+            margin-right: 10px;
+            display: inline-block;
+            white-space: nowrap;
+            min-height: 16px !important;
+            min-width: 16px !important;
+            height: 16px;
+            width: 16px;
+            border: 0;
+            background-size: contain;
+            background-repeat: no-repeat;
+            cursor: pointer;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0px;
+                left: 0;
+                height: 16px;
+                width: 16px;
+                border: 0;
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+                cursor: pointer;
+                background-image: url('/Images/mwredesign/unchecked-header-checkbox-white.png');
+            }
+        }
+
+
+        &:checked + label {
+            &:before {
+                background-image: url('/Images/mwredesign/checked-header-checkbox-white.png');
+            }
+        }
+    }
+}
+/*header checkbox design*/
+
+/*Checkbox*/
+.genericCheckboxDesign {
+    input[type="checkbox"] {
+        display: inline;
+        height: 16px !important;
+        width: 16px !important;
+        cursor: pointer;
+
+        &[style*="hidden"] {
+            & ~ label {
+                display: none !important;
+            }
+        }
+
+        & ~ label {
+            position: relative;
+            cursor: pointer;
+            padding: 0 0 0 20px !important;
+            font-size: 1em !important;
+            margin-right: 10px;
+            display: inline-block;
+            white-space: nowrap;
+            min-height: 16px !important;
+            min-width: 16px !important;
+            height: 16px;
+            width: 16px;
+            border: 0;
+            background-size: contain;
+            background-repeat: no-repeat;
+            cursor: pointer;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0px;
+                left: 0;
+                height: 16px;
+                width: 16px;
+                border: 0;
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+                cursor: pointer;
+                background-image: url('/Images/mwredesign/checkbox-unselected.png');
+            }
+        }
+
+        &:checked ~ label {
+            &:before {
+                background-image: url('/Images/mwredesign/checkbox-selected.png');
+            }
+        }
+
+        &:indeterminate ~ label {
+
+            &:before {
+                background-image: url('/Images/mwredesign/partial-checkbox-selected.png');
+            }
+        }
+
+        &:disabled ~ label {
+            cursor: default;
+            pointer-events: none;
+
+            &:before {
+                background-image: url('/Images/mwredesign/checkbox-disabled-unselected.png');
+            }
+        }
+
+        &:checked:disabled ~ label {
+
+            &:before {
+                background-image: url('/Images/mwredesign/checkbox-disabled-selected.png');
+            }
+        }
+
+        &:indeterminate:disabled ~ label {
+
+            &:before {
+                background-image: url('/Images/mwredesign/partial-checkbox-dis-selected.png');
+            }
+        }
+    }
+}
+
+.genericCheckboxDesignImmediate {
+    input[type="checkbox"] {
+        display: inline;
+        height: 16px !important;
+        width: 16px !important;
+        cursor: pointer;
+
+        &[style*="hidden"] {
+            & + label {
+                display: none !important;
+            }
+        }
+
+        & + label {
+            position: relative;
+            cursor: pointer;
+            padding: 0 0 0 20px !important;
+            font-size: 1em !important;
+            margin-right: 10px;
+            display: inline-block;
+            white-space: nowrap;
+            min-height: 16px !important;
+            min-width: 16px !important;
+            height: 16px;
+            width: 16px;
+            border: 0;
+            background-size: contain;
+            background-repeat: no-repeat;
+            cursor: pointer;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0px;
+                left: 0;
+                height: 16px;
+                width: 16px;
+                border: 0;
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+                cursor: pointer;
+                background-image: url('/Images/mwredesign/checkbox-unselected.png');
+            }
+        }
+
+        &:checked + label {
+
+            &:before {
+                background-image: url('/Images/mwredesign/checkbox-selected.png');
+            }
+        }
+
+        &:indeterminate + label {
+
+            &:before {
+                background-image: url('/Images/mwredesign/partial-checkbox-selected.png');
+            }
+        }
+
+        &:disabled + label {
+            cursor: default;
+            pointer-events: none;
+
+            &:before {
+                background-image: url('/Images/mwredesign/checkbox-disabled-unselected.png');
+            }
+        }
+
+        &:checked:disabled + label {
+
+            &:before {
+                background-image: url('/Images/mwredesign/checkbox-disabled-selected.png');
+            }
+        }
+
+        &:indeterminate:disabled + label {
+
+            &:before {
+                background-image: url('/Images/mwredesign/partial-checkbox-dis-selected.png');
+            }
+        }
+    }
+}
+
+
+
+.cbC {
+    .mw-customcheckbox;
+
+    input[type="checkbox"] {
+        opacity: 0;
+
+        & + label {
+            &:before {
+            }
+        }
+    }
+}
+
+/*customize list header checkbox*/
+.ui-dialog #mainGrid thead.headerRow tr.headerRow th {
+    .mw-customcheckbox {
+        .genericHeaderCheckboxDesign;
+
+        input[type="checkbox"] {
+            display: block;
+            opacity: 0;
+            z-index: 1;
+            position: static;
+
+            & + label {
+                position: absolute;
+                left: 4px;
+                pointer-events: none;
+            }
+        }
+    }
+}
+
+/*customize list*/
+.ui-dialog #mainGrid {
+    .mw-customcheckbox {
+        input[type="checkbox"] {
+            display: block;
+            opacity: 0;
+            z-index: 1;
+            position: static;
+
+            & + label {
+                position: absolute;
+                left: 4px;
+                pointer-events: none;
+            }
+        }
+    }
+}
+
+.mw-design#coreMainControlDiv div.RadGrid .rgMasterTable thead tr.rgFilterRow > td,
+.ui-dialog div.RadGrid .rgMasterTable thead tr.rgFilterRow > td {
+    .genericCheckboxDesign;
+    position: relative !important;
+
+    input[type="checkbox"] {
+        display: inline-block;
+        z-index: 1001;
+        opacity: 0;
+        position: absolute;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%,-50%);
+        margin-right: calc(90% - 60px) !important;
+
+        & + .radgrid-cb-label {
+            height: 16px !important;
+            width: 16px !important;
+            padding: 0 !important;
+            display: inline-block;
+            height: 16px !important;
+            width: 16px !important;
+            padding: 0 !important;
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            left: 50% !important;
+            transform: translate(-50%,-50%);
+        }
+    }
+
+    :-ms-lang(x), input[type="checkbox"] {
+        top: 14px !important;
+
+        & + label {
+            top: 14px !important;
+        }
+    }
+}
+
+
+.igtable-container-header {
+    .mw-customcheckbox {
+        input[type="checkbox"] ~ label {
+            display: block;
+            margin: 0 0 0 2px !important;
+            padding: 0 0 0 0 !important;
+        }
+    }
+}
+
+
+.mw-customcheckbox[controltype="CheckBoxList"] {
+    input[type="checkbox"] {
+        display: inline-block !important;
+    }
+}
+
+
+.dynatree-node {
+    span.dynatree-checkbox {
+        background-size: contain;
+        background-image: url('/Images/mwredesign/checkbox-unselected.png') !important;
+        background-position: center !important;
+    }
+
+    &.dynatree-selected {
+        span.dynatree-checkbox {
+            background-size: contain;
+            background-image: url('/Images/mwredesign/checkbox-selected.png') !important;
+        }
+    }
+}
+/*checklist popup*/
+.RadButton.rbCheckBox {
+    span.rbToggleCheckbox {
+        color: transparent;
+        background-size: contain;
+        background-image: url('/Images/mwredesign/checkbox-unselected.png') !important;
+        background-position: center !important;
+
+        &:before {
+            content: "";
+        }
+    }
+
+    span.rbToggleCheckboxChecked {
+        color: transparent;
+        background-size: contain;
+        background-image: url('/Images/mwredesign/checkbox-selected.png') !important;
+    }
+}
+
+.empty-cbtext .cbC input[type="checkbox"] + label {
+    /*394015*/
+    color: transparent;
+    top: 2px;
+    /*397685*/
+    /*padding: 0 !important;*/
+}
+
+
+.mw-customcheckbox input[type=checkbox] + label {
+    font-size: 1.1em !important;
+    left: 8px;
+    top: 1px;
+
+    &:before {
+        top: 0;
+    }
+}
+
+/*custom checkbox ends here*/
+.mw-design#coreMainControlDiv .tdTextAlignRgt + td.tdTextValue.tdTextSubValue {
+    input[type=checkbox] ~ label {
+        top: 5px;
+    }
+}
+
+/*picker header*/
+div.ui-dialog .ui-dialog-content.ui-widget-content table thead tr th[role="columnheader"].k-header {
+    .genericHeaderCheckboxDesign;
+    position: relative;
+
+    input[type="checkbox"] {
+        display: inline-block !important;
+        opacity: 0;
+        z-index: 100001;
+        cursor: pointer;
+        margin: 0 !important;
+        position: absolute;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%);
+
+        & + label.radgrid-cb-label {
+            z-index: 1000;
+            height: 16px !important;
+            width: 16px !important;
+            max-width: 16px !important;
+            padding: 0 !important;
+            margin: 0;
+            position: absolute;
+            top: 50% !important;
+            left: 50% !important;
+            transform: translate(-50%, -50%);
+
+            &:before {
+                margin: 0;
+                position: absolute;
+                top: 50% !important;
+                left: 50% !important;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+
+    :-ms-lang(x), input[type="checkbox"] {
+        top: 16px !important;
+
+        & + label.radgrid-cb-label {
+            top: 16px !important;
+        }
+    }
+}
+
+
+/*picker data row*/
+div.ui-dialog .ui-dialog-content.ui-widget-content table tbody tr[role="row"] td[role="gridcell"] {
+    .genericCheckboxDesign;
+    position: relative;
+
+    input[type="checkbox"] {
+        display: inline-block !important;
+        opacity: 0;
+        z-index: 9999;
+        cursor: pointer;
+        margin: 0 !important;
+        position: absolute;
+        top: 14px;
+        left: 50% !important;
+        transform: translate(-50%, -50%);
+
+        & + label.radgrid-cb-label {
+            z-index: 1000;
+            height: 16px !important;
+            width: 16px !important;
+            max-width: 16px !important;
+            padding: 0 !important;
+            margin: 0;
+            position: absolute;
+            top: 14px;
+            left: 50% !important;
+            transform: translate(-50%, -50%);
+
+            &:before {
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50% !important;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}
+
+
+table[role="grid"] thead[role="rowgroup"] tr[role="row"] th[scope="col"] {
+    .genericHeaderCheckboxDesign;
+
+    input[type="checkbox"].k-checkbox {
+        display: block !important;
+        z-index: 1001;
+        opacity: 0;
+        cursor: pointer;
+        position: relative;
+        top: 8px;
+        left: 0;
+
+        & + label.k-checkbox-label {
+            margin: 0;
+            padding: 0 !important;
+            display: block;
+            top: -9px;
+            left: 4px;
+
+            &:before {
+                height: 16px !important;
+                width: 16px !important;
+                box-shadow: none !important;
+            }
+        }
+    }
+}
+
+
+table[role="grid"] tbody[role="rowgroup"] tr[role="row"] td[role="gridcell"] {
+    .genericCheckboxDesign;
+
+    input[type="checkbox"].k-checkbox {
+        display: block !important;
+        z-index: 1001;
+        opacity: 0;
+        cursor: pointer;
+        position: relative;
+        top: 8px;
+        left: 0;
+
+        & + label.k-checkbox-label {
+            margin: 0;
+            padding: 0 !important;
+            display: block;
+            top: -9px;
+            left: 4px;
+
+            &:before {
+                height: 16px !important;
+                width: 16px !important;
+                box-shadow: none !important;
+            }
+        }
+    }
+}
+
+
+
+.k-checkbox + .k-checkbox-label:before {
+    background-color: transparent !important;
+}
+
+.k-checkbox:checked + .k-checkbox-label:before {
+    background-color: transparent !important;
+}
+
+
+.ui-dialog .mw-customcheckbox input[type=checkbox] ~ label {
+    left: 4px;
+    top: 4px;
+}
+
+
+.mw-design#coreMainControlDiv .tdTextAlignRgt + td.tdTextValue > span.cbC {
+    margin-top: 0;
+    min-height: 24px !important;
+}
+
+.RadComboBoxDropDown .rcbScroll {
+    .genericCheckboxDesign;
+
+    input[type="checkbox"] {
+        display: inline;
+        z-index: 1001;
+        opacity: 0;
+        position: relative;
+        top: 0;
+
+        & + .radgrid-cb-label {
+            height: 16px !important;
+            width: 16px !important;
+            padding: 0 !important;
+            display: inline;
+            top: 0;
+            left: -20px;
+            margin-right: 0;
+        }
+    }
+}
+
+/*library - checklist popup*/
+.ui-dialog {
+    table.mw-design.library-checklist {
+        tr {
+            th {
+                input[type="checkbox"] {
+                    display: block !important;
+                    z-index: 1001;
+                    opacity: 0;
+                    cursor: pointer;
+                    position: relative;
+                    margin: auto;
+                    top: 9px;
+                    left: 0 !important;
+
+                    & + label.radgrid-cb-label {
+                        height: 16px !important;
+                        width: 16px !important;
+                        max-width: 16px !important;
+                        margin: 0 auto;
+                        padding: 0 !important;
+                        display: block;
+                        top: -7px;
+                        left: -1px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*filter popup checkbox*/
+.ui-dialog {
+    #divAddData {
+        span.fontweight600.mw-customcheckbox {
+            input[type="checkbox"] {
+                position: relative;
+                opacity: 0;
+                top: 4px;
+
+                & + label {
+                    left: -22px;
+                    top: 4px;
+                }
+            }
+        }
+    }
+}

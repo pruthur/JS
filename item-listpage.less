@@ -1,0 +1,23 @@
+﻿#headerTbl {
+    position: relative;
+
+    &.headerdiv {
+        background-color: #fff;
+    }
+
+    &[style*='overflow-x'] {
+        &:before {
+            content: '';
+            height: calc(100% - 64px);
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: #fff;
+        }
+    }
+
+    td[mw-hgrid-checkbox-header="true"] {
+        text-align: center;
+    }
+}
